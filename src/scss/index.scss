@@ -42,6 +42,38 @@ $default-padding: 0 210px;
         color: #353535;
         background-color: transparent;
         border: none;
+        div {
+          border: 2px solid #ECECEC;
+          left: -3px;
+          top: 40px;
+          width: 250px;
+          input{
+            border-radius: 25px;
+            border: none;
+            background-color: #F8F8F8;
+            &:focus{
+              outline: none;
+            }
+            &::placeholder{
+              font-size: 13px;
+              vertical-align: 13px;
+              top: 9px;
+              position: absolute;
+            }
+          }
+          button{
+            .fa-arrow-left {
+                left: 22px;
+                top: 12px;
+                transition: color 0.2s ease;
+                &:hover {
+                  color: #FF673A;
+                }
+              }
+              
+          }
+        }
+
       }
 
       .active-item {

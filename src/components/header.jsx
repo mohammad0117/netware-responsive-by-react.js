@@ -7,6 +7,7 @@ import "../assets/css/index.css";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../assets/image/header_logo.min.png";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 class Header extends Component {
   state = {};
   mainpage = createRef();
@@ -17,6 +18,7 @@ class Header extends Component {
   aboutas = createRef();
   contactus = createRef();
   search = createRef();
+  searchbox=createRef()
   items = [
     this.mainpage,
     this.services,
@@ -104,10 +106,23 @@ class Header extends Component {
                 <button
                   ref={this.search}
                   onClick={this.toggleActive}
-                  className="text-decoration-none me-3"
+                  className="text-decoration-none me-3 position-relative"
                   href=""
                 >
                   <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+                  <div ref={this.searchbox} className="search-box position-absolute p-2 bg-white">
+                    <input
+                      className="w-100 py-2 pe-3"
+                      placeholder="search"
+                      type="text"
+                    />
+                    <button className="position-absolute">
+                      <FontAwesomeIcon
+                        className="fa-arrow-left position-absolute"
+                        icon={faArrowLeft}
+                      ></FontAwesomeIcon>
+                    </button>
+                  </div>
                 </button>
               </ul>
             </Col>

@@ -38,6 +38,62 @@
   border: none;
 }
 
+.header .header__menu .header__menu__items button div {
+  border: 2px solid #ECECEC;
+  left: -3px;
+  top: 40px;
+  width: 250px;
+}
+
+.header .header__menu .header__menu__items button div input {
+  border-radius: 25px;
+  border: none;
+  background-color: #F8F8F8;
+}
+
+.header .header__menu .header__menu__items button div input:focus {
+  outline: none;
+}
+
+.header .header__menu .header__menu__items button div input::-webkit-input-placeholder {
+  font-size: 13px;
+  vertical-align: 13px;
+  top: 9px;
+  position: absolute;
+}
+
+.header .header__menu .header__menu__items button div input:-ms-input-placeholder {
+  font-size: 13px;
+  vertical-align: 13px;
+  top: 9px;
+  position: absolute;
+}
+
+.header .header__menu .header__menu__items button div input::-ms-input-placeholder {
+  font-size: 13px;
+  vertical-align: 13px;
+  top: 9px;
+  position: absolute;
+}
+
+.header .header__menu .header__menu__items button div input::placeholder {
+  font-size: 13px;
+  vertical-align: 13px;
+  top: 9px;
+  position: absolute;
+}
+
+.header .header__menu .header__menu__items button div button .fa-arrow-left {
+  left: 22px;
+  top: 12px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.header .header__menu .header__menu__items button div button .fa-arrow-left:hover {
+  color: #FF673A;
+}
+
 .header .header__menu .header__menu__items .active-item {
   color: #FF673A;
 }
