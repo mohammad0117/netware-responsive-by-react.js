@@ -1,0 +1,44 @@
+.header .header__bar {
+  background-color: #f9fafe;
+  padding: 0 210px;
+}
+
+.header .header__bar .header__bar__link img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.header .header__bar .header__bar__phone {
+  background-color: #FF673A;
+  color: #fff;
+}
+
+.header .header__menu {
+  padding: 0 210px;
+}
+
+.header .header__menu .header__menu__items li {
+  display: inline-block;
+  text-decoration: none;
+  color: #353535;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.header .header__menu .header__menu__items li:hover {
+  color: #FF6F44;
+}
+
+.header .header__menu .header__menu__items button {
+  color: #353535;
+  background-color: transparent;
+  border: none;
+}
+
+.header .header__menu .header__menu__items .active-item {
+  color: #FF673A;
+}
+/*# sourceMappingURL=index.css.map */

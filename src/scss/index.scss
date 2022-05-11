@@ -1,0 +1,52 @@
+//varibels
+$default-padding: 0 210px;
+
+//header components
+.header {
+  .header__bar {
+    background-color: #f9fafe;
+    padding: $default-padding;
+
+    .header__bar__link {
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+      }
+    }
+
+    .header__bar__phone {
+      background-color: #FF673A;
+      color: #fff;
+    }
+  }
+
+  .header__menu {
+    padding: $default-padding;
+
+    .header__menu__items {
+      li {
+        display: inline-block;
+        text-decoration: none;
+        color: #353535;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #FF6F44;
+        }
+      }
+
+      button {
+        color: #353535;
+        background-color: transparent;
+        border: none;
+      }
+
+      .active-item {
+        color: #FF673A
+      }
+    }
+  }
+}
