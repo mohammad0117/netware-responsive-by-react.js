@@ -1,27 +1,29 @@
 //varibels
 $default-padding: 0 210px;
-$defaualt-orange-color:#FF673A;
+$defaualt-orange-color: #FF673A;
+
 //animations
 @keyframes show {
-  from{
-    visibility: hidden;
-    transform: translateY(20px);
+  0% {
+    transform: translateY(10px);
   }
-    to {
-      visibility: visible;
-      transform: translateY(0);
-    }
+  100%{
+    transform: translateY(0);
+  }
 }
+
 @keyframes hidden {
-  from {
-      visibility: visible;
+  
+  0% {
+      
       transform: translateY(0);
     }
-  to {
-    visibility: hidden;
-    transform: translateY(20px);
-  }
+  
+    100% {
+      transform: translateY(10px);
+    }
 }
+
 //header components
 .header {
   .header__bar {
@@ -63,43 +65,53 @@ $defaualt-orange-color:#FF673A;
         color: #353535;
         background-color: transparent;
         border: none;
+
         div {
-          visibility: hidden;
+          display:none;
           border: 2px solid #ECECEC;
           left: -3px;
           top: 40px;
           width: 250px;
-          input{
+
+          input {
             border-radius: 25px;
             border: none;
             background-color: #F8F8F8;
-            &:focus{
+
+            &:focus {
               outline: none;
             }
-            &::placeholder{
+
+            &::placeholder {
               font-size: 13px;
               vertical-align: 13px;
               top: 9px;
               position: absolute;
             }
           }
-          button{
+
+          button {
             .fa-arrow-left {
-                left: 22px;
-                top: 12px;
-                transition: color 0.2s ease;
-                &:hover {
-                  color:$defaualt-orange-color;
-                }
+              left: 22px;
+              top: 12px;
+              transition: color 0.2s ease;
+
+              &:hover {
+                color: $defaualt-orange-color;
               }
-              
+            }
+
           }
         }
 
       }
 
       .active-item {
-        color:$defaualt-orange-color
+        color: $defaualt-orange-color
+      }
+      .activv{
+        animation: show 0.3s;
+          visibility: visible;
       }
     }
   }

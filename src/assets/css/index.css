@@ -1,52 +1,44 @@
 @-webkit-keyframes show {
-  from {
-    visibility: hidden;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
-  to {
-    visibility: visible;
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 }
 
 @keyframes show {
-  from {
-    visibility: hidden;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
-  to {
-    visibility: visible;
+  100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 }
 
 @-webkit-keyframes hidden {
-  from {
-    visibility: visible;
+  0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  to {
-    visibility: hidden;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
 @keyframes hidden {
-  from {
-    visibility: visible;
+  0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  to {
-    visibility: hidden;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
@@ -91,7 +83,7 @@
 }
 
 .header .header__menu .header__menu__items button div {
-  visibility: hidden;
+  display: none;
   border: 2px solid #ECECEC;
   left: -3px;
   top: 40px;
@@ -149,5 +141,11 @@
 
 .header .header__menu .header__menu__items .active-item {
   color: #FF673A;
+}
+
+.header .header__menu .header__menu__items .activv {
+  -webkit-animation: show 0.3s;
+          animation: show 0.3s;
+  visibility: visible;
 }
 /*# sourceMappingURL=index.css.map */
