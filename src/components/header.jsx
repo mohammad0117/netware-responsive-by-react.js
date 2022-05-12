@@ -18,7 +18,7 @@ class Header extends Component {
   aboutas = createRef();
   contactus = createRef();
   search = createRef();
-  searchbox=createRef()
+  searchbox = createRef();
   items = [
     this.mainpage,
     this.services,
@@ -107,10 +107,12 @@ class Header extends Component {
                   ref={this.search}
                   onClick={this.toggleActive}
                   className="text-decoration-none me-3 position-relative"
-                  href=""
                 >
                   <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-                  <div ref={this.searchbox} className="search-box position-absolute p-2 bg-white">
+                  <div
+                    ref={this.searchbox}
+                    className="search-box position-absolute p-2 bg-white"
+                  >
                     <input
                       className="w-100 py-2 pe-3"
                       placeholder="search"
@@ -137,6 +139,15 @@ class Header extends Component {
   };
   toggleActive = () => {
     this.search.current.classList.toggle("active-item");
+    if ((this.search.current.classList.add = "active-item")) {
+      this.searchbox.current.style.animation = "show 0.8s";
+      this.searchbox.current.style.visibility = "visible";
+    }
+    if ((this.searchbox.current.style.visibility = "visible")) {
+      this.searchbox.current.style.animation = "hidden 0.8s";
+      this.searchbox.current.style.visibility = "hidden";
+    }
+    
   };
 }
 

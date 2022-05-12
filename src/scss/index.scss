@@ -1,6 +1,27 @@
 //varibels
 $default-padding: 0 210px;
-
+$defaualt-orange-color:#FF673A;
+//animations
+@keyframes show {
+  from{
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+    to {
+      visibility: visible;
+      transform: translateY(0);
+    }
+}
+@keyframes hidden {
+  from {
+      visibility: visible;
+      transform: translateY(0);
+    }
+  to {
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+}
 //header components
 .header {
   .header__bar {
@@ -16,7 +37,7 @@ $default-padding: 0 210px;
     }
 
     .header__bar__phone {
-      background-color: #FF673A;
+      background-color: $defaualt-orange-color;
       color: #fff;
     }
   }
@@ -43,6 +64,7 @@ $default-padding: 0 210px;
         background-color: transparent;
         border: none;
         div {
+          visibility: hidden;
           border: 2px solid #ECECEC;
           left: -3px;
           top: 40px;
@@ -67,7 +89,7 @@ $default-padding: 0 210px;
                 top: 12px;
                 transition: color 0.2s ease;
                 &:hover {
-                  color: #FF673A;
+                  color:$defaualt-orange-color;
                 }
               }
               
@@ -77,7 +99,7 @@ $default-padding: 0 210px;
       }
 
       .active-item {
-        color: #FF673A
+        color:$defaualt-orange-color
       }
     }
   }

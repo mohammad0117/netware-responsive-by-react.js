@@ -1,3 +1,55 @@
+@-webkit-keyframes show {
+  from {
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  from {
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes hidden {
+  from {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes hidden {
+  from {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
 .header .header__bar {
   background-color: #f9fafe;
   padding: 0 210px;
@@ -39,6 +91,7 @@
 }
 
 .header .header__menu .header__menu__items button div {
+  visibility: hidden;
   border: 2px solid #ECECEC;
   left: -3px;
   top: 40px;
