@@ -37,12 +37,15 @@ class Header extends Component {
               xs={12}
               className="header__bar d-flex justify-content-between align-items-center"
             >
-              <Link className="header__bar__link me-sm-5" to="main-page">
+              <Link
+                className="header__bar__link me-2 me-sm-5 me-md-5 me-lg-5"
+                to="main-page"
+              >
                 <img src={UsaFlag} alt="usa-flag" />
               </Link>
               <a
                 href="#"
-                className="header__bar__phone text-decoration-none p-2 ms-sm-5"
+                className="header__bar__phone text-decoration-none p-2 ms-2 ms-sm-5 ms-md-5 ms-lg-5"
               >
                 <span>
                   021-22009250
@@ -50,11 +53,37 @@ class Header extends Component {
                 </span>
               </a>
             </Col>
-            <Col className="header__menu py-5 d-flex justify-content-between align-items-center">
-              <Link className="header__menu__logo" to="/">
+            <Col className="header__menu d-flex justify-content-between align-items-center mt-4">
+              <Link className="header__menu__logo me-2" to="/">
                 <img src={HeaderLogo} alt="header-logo" />
               </Link>
-              <ul className="header__menu__items pt-1 ps-0">
+              <div className="header__menu__dropdown position-relative">
+                <button className="header__menu__dropdown__icon">
+                  <span className=" d-block"></span>
+                  <span className="mt-1 d-block"></span>
+                  <span className="mt-1 d-block"></span>
+                </button>
+                <div className="header__menu__dropdown__items bg-white position-absolute">
+                  <Link to="/" className="text-decoration-none ms-2 me-5">
+                    <li
+                      className="active-item"
+                      ref={this.mainpage}
+                      onClick={this.active(this.mainpage)}
+                    >
+                      صفحه اصلی
+                    </li>
+                  </Link>
+                  <Link to="services" className="text-decoration-none mx-2">
+                    <li
+                      ref={this.services}
+                      onClick={this.active(this.services)}
+                    >
+                      خدمات
+                    </li>
+                  </Link>
+                </div>
+              </div>
+              <ul className="header__menu__items pt-1 ps-0 d-none">
                 <Link to="/" className="text-decoration-none ms-2 me-5">
                   <li
                     className="active-item"

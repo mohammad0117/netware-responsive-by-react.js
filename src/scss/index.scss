@@ -29,9 +29,21 @@ $defaualt-orange-color: #FF673A;
     }
 }
 //custom media
+@media screen and (min-width: 576px) and (max-width: 768px){
+  .header__bar {
+      padding: 0 45px !important;
+    }
+}
 @media  screen and (min-width: 1180px) {
   .header__bar{
-    padding: 0 280px !important;
+    padding: 0 162px !important;
+  }
+}
+@media screen and (max-width: 991px){
+  .header__menu__logo{
+    img{
+      width: 140px !important;
+    }
   }
 }
 //header components
@@ -55,8 +67,23 @@ $defaualt-orange-color: #FF673A;
   }
 
   .header__menu {
-    padding: $default-padding;
+    .header__menu__dropdown{
+      .header__menu__dropdown__icon{
+        background-color: transparent;
+        border: none;
+        span{
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+        }
 
+      }
+      .header__menu__dropdown__items{
+        top: 35px;
+        width: 500px;
+        right: -434px;
+      }
+    }
     .header__menu__items {
       li {
         display: inline-block;
