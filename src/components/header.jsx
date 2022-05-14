@@ -37,12 +37,12 @@ class Header extends Component {
               xs={12}
               className="header__bar d-flex justify-content-between align-items-center"
             >
-              <Link className="header__bar__link" to="main-page">
+              <Link className="header__bar__link me-sm-5" to="main-page">
                 <img src={UsaFlag} alt="usa-flag" />
               </Link>
               <a
                 href="#"
-                className="header__bar__phone text-decoration-none py-2 px-3"
+                className="header__bar__phone text-decoration-none p-2 ms-sm-5"
               >
                 <span>
                   021-22009250
@@ -141,10 +141,11 @@ class Header extends Component {
   toggleActive = () => {
     this.search.current.classList.toggle("active-item");
     if (this.search.current.classList.contains("active-item")) {
-      // this.searchbox.current.style.animation = "show 0.5s";
-      this.searchbox.current.classList.add("activv");
+      this.searchbox.current.style.animation = "show 0.5s";
+      this.searchbox.current.style.visibility='visible'
     }else{
-      this.searchbox.current.style.animation = "hidden 1.5s";
+      this.searchbox.current.style.animation = "hidden 0.5s";
+      this.searchbox.current.style.visibility = "hidden";
     }
   };
 }
