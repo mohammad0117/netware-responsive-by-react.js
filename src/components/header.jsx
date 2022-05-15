@@ -15,7 +15,7 @@ class Header extends Component {
   portfolio = createRef();
   articles = createRef();
   recruitment = createRef();
-  aboutas = createRef();
+  aboutus = createRef();
   contactus = createRef();
   search = createRef();
   searchbox = createRef();
@@ -24,15 +24,17 @@ class Header extends Component {
   portfoliodrop = createRef();
   articlesdrop = createRef();
   recruitmentdrop = createRef();
-  aboutasdrop = createRef();
+  aboutusdrop = createRef();
   contactusdrop = createRef();
+  dropdownicon=createRef();
+  dropdownmenu=createRef();
   items = [
     this.mainpage,
     this.services,
     this.portfolio,
     this.articles,
     this.recruitment,
-    this.aboutas,
+    this.aboutus,
     this.contactus,
   ];
   itemsdrop = [
@@ -41,7 +43,7 @@ class Header extends Component {
     this.portfoliodrop,
     this.articlesdrop,
     this.recruitmentdrop,
-    this.aboutasdrop,
+    this.aboutusdrop,
     this.contactusdrop,
   ];
   render() {
@@ -74,67 +76,93 @@ class Header extends Component {
                 <img src={HeaderLogo} alt="header-logo" />
               </Link>
               <div className="header__menu__dropdown position-relative">
-                <button className="header__menu__dropdown__icon">
-                  <span className=" d-block"></span>
-                  <span className="mt-1 d-block"></span>
-                  <span className="mt-1 d-block"></span>
+                <button
+                  ref={this.dropdownicon}
+                  onClick={this.toggleDropDown}
+                  className="header__menu__dropdown__icon"
+                >
+                  <span className="line-one d-block"></span>
+                  <span className="line-two mt-1 d-block"></span>
+                  <span className="line-three mt-1 d-block"></span>
                 </button>
-                <div className="header__menu__dropdown__items bg-white position-absolute">
+                <ul ref={this.dropdownmenu} onClick={this.toggleDropDown} className="bg-white p-0 position-absolute">
                   <Link
-                    ref={this.mainpagedrop}
-                    onClick={this.active(this.mainpagedrop)}
                     to="/"
-                    className="header__menu__dropdown__items__option active-item mt-2 d-block "
+                    className="header__menu__dropdown__option mt-2 d-block"
                   >
-                    صفحه اصلی
+                    <li
+                      className="active-item"
+                      ref={this.mainpagedrop}
+                      onClick={this.activeDrop(this.mainpagedrop)}
+                    >
+                      صفحه اصلی
+                    </li>
                   </Link>
                   <Link
-                    ref={this.servicesdrop}
-                    onClick={this.activeDrop(this.servicesdrop)}
                     to="services"
-                    className="header__menu__dropdown__items__option d-block my-2 "
+                    className="header__menu__dropdown__option d-block my-2 "
                   >
-                    خدمات
+                    <li
+                      ref={this.servicesdrop}
+                      onClick={this.activeDrop(this.servicesdrop)}
+                    >
+                      خدمات
+                    </li>
                   </Link>
                   <Link
-                    ref={this.portfoliodrop}
-                    onClick={this.activeDrop(this.portfoliodrop)}
                     to="portfolio"
-                    className="header__menu__dropdown__items__option d-block my-2 "
+                    className="header__menu__dropdown__option d-block my-2 "
                   >
-                    نمونه کارها
+                    <li
+                      ref={this.portfoliodrop}
+                      onClick={this.activeDrop(this.portfoliodrop)}
+                    >
+                      نمونه کارها
+                    </li>
                   </Link>
                   <Link
-                    ref={this.articlesdrop}
-                    onClick={this.activeDrop(this.articlesdrop)}
                     to="articles"
-                    className="header__menu__dropdown__items__option  d-block my-2 "
+                    className="header__menu__dropdown__option  d-block my-2 "
                   >
-                    مقالات
+                    <li
+                      ref={this.articlesdrop}
+                      onClick={this.activeDrop(this.articlesdrop)}
+                    >
+                      مقالات
+                    </li>
                   </Link>
                   <Link
-                    ref={this.recruitmentdrop}
-                    onClick={this.activeDrop(this.recruitmentdrop)}
                     to="recruiment"
-                    className="header__menu__dropdown__items__option  d-block my-2 "
+                    className="header__menu__dropdown__option  d-block my-2 "
                   >
-                    استخدام
+                    <li
+                      ref={this.recruitmentdrop}
+                      onClick={this.activeDrop(this.recruitmentdrop)}
+                    >
+                      استخدام
+                    </li>
                   </Link>
                   <Link
-                    ref={this.abouttusdrop}
-                    onClick={this.activeDrop(this.abouttusdrop)}
                     to="about-us"
-                    className="header__menu__dropdown__items__option  d-block my-2 "
+                    className="header__menu__dropdown__option  d-block my-2 "
                   >
-                    درباره ما
+                    <li
+                      ref={this.aboutusdrop}
+                      onClick={this.activeDrop(this.aboutusdrop)}
+                    >
+                      درباره ما
+                    </li>
                   </Link>
                   <Link
-                    ref={this.contactusdrop}
-                    onClick={this.activeDrop(this.contactusdrop)}
                     to="contact-us"
-                    className="header__menu__dropdown__items__option  d-block my-2 "
+                    className="header__menu__dropdown__option  d-block my-2 "
                   >
-                    تماس با ما
+                    <li
+                      ref={this.contactusdrop}
+                      onClick={this.activeDrop(this.contactusdrop)}
+                    >
+                      تماس با ما
+                    </li>
                   </Link>
                   <div className="mt-4 position-relative">
                     <input
@@ -149,7 +177,7 @@ class Header extends Component {
                       ></FontAwesomeIcon>
                     </button>
                   </div>
-                </div>
+                </ul>
               </div>
               <ul className="header__menu__items pt-1 ps-0 d-none">
                 <Link to="/" className="text-decoration-none ms-2 me-5">
@@ -188,7 +216,7 @@ class Header extends Component {
                   </li>
                 </Link>
                 <Link to="about-us" className="text-decoration-none mx-2">
-                  <li ref={this.aboutas} onClick={this.active(this.aboutas)}>
+                  <li ref={this.aboutus} onClick={this.active(this.aboutus)}>
                     درباره ما
                   </li>
                 </Link>
@@ -249,6 +277,13 @@ class Header extends Component {
       this.searchbox.current.style.visibility = "hidden";
     }
   };
+  toggleDropDown=()=>{
+    this.dropdownicon.current.classList.toggle('show-dropdown')
+    this.dropdownmenu.current.classList.toggle("d-block");
+  }
+  dropDownDisplay=()=>{
+    
+  }
 }
 
 export default Header;

@@ -83,24 +83,24 @@ $defaualt-orange-color: #FF673A;
           height: 2px;
           background-color: #000;
         }
-
       }
 
-      .header__menu__dropdown__items {
+      ul {
+        display: none;
         top: 35px;
         width: 500px;
         right: -438px;
-      }
+        .header__menu__dropdown__option {
+          list-style: none;
+          text-decoration: none;
+          color: #353535;
+          font-size: 14px;
+          font-weight: 500;
+          transition: color 0.2s ease;
 
-      .header__menu__dropdown__items__option {
-        text-decoration: none;
-        color: #353535;
-        font-size: 14px;
-        font-weight: 500;
-        transition: color 0.2s ease;
-
-        &:hover {
-          color: #FF6F44;
+          &:hover {
+            color: #FF6F44;
+          }
         }
       }
 
@@ -137,6 +137,24 @@ $defaualt-orange-color: #FF673A;
               color: #FF6F44;
             }
           }
+        }
+      }
+
+      .show-dropdown {
+        .line-one {
+          transition: transform 0.4s ease;
+          transform: rotate(50deg);
+        }
+
+        .line-two {
+          visibility: hidden;
+        }
+
+        .line-three {
+          position: absolute;
+          top: 6px;
+          transition: transform 0.4s ease;
+          transform: rotate(134deg);
         }
       }
     }
@@ -202,6 +220,6 @@ $defaualt-orange-color: #FF673A;
   }
 
   .active-item {
-    color: $defaualt-orange-color !important;
+    color: $defaualt-orange-color  !important;
   }
 }
