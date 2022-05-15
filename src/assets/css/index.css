@@ -93,7 +93,75 @@
 .header .header__menu .header__menu__dropdown .header__menu__dropdown__items {
   top: 35px;
   width: 500px;
-  right: -434px;
+  right: -438px;
+}
+
+.header .header__menu .header__menu__dropdown .header__menu__dropdown__items__option {
+  text-decoration: none;
+  color: #353535;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.header .header__menu .header__menu__dropdown .header__menu__dropdown__items__option:hover {
+  color: #FF6F44;
+}
+
+.header .header__menu .header__menu__dropdown div {
+  width: 300px;
+}
+
+.header .header__menu .header__menu__dropdown div input {
+  width: 300px;
+  background-color: #ECECEC;
+  border: none;
+  border-radius: 8px;
+}
+
+.header .header__menu .header__menu__dropdown div input::-webkit-input-placeholder {
+  position: absolute;
+  top: 15px;
+  color: #000;
+}
+
+.header .header__menu .header__menu__dropdown div input:-ms-input-placeholder {
+  position: absolute;
+  top: 15px;
+  color: #000;
+}
+
+.header .header__menu .header__menu__dropdown div input::-ms-input-placeholder {
+  position: absolute;
+  top: 15px;
+  color: #000;
+}
+
+.header .header__menu .header__menu__dropdown div input::placeholder {
+  position: absolute;
+  top: 15px;
+  color: #000;
+}
+
+.header .header__menu .header__menu__dropdown div input:focus {
+  outline: none;
+}
+
+.header .header__menu .header__menu__dropdown div button {
+  background-color: transparent;
+  border: none;
+}
+
+.header .header__menu .header__menu__dropdown div button .fa-search {
+  top: 22px;
+  left: 15px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.header .header__menu .header__menu__dropdown div button .fa-search:hover {
+  color: #FF6F44;
 }
 
 .header .header__menu .header__menu__items li {
@@ -136,28 +204,24 @@
 
 .header .header__menu .header__menu__items button div input::-webkit-input-placeholder {
   font-size: 13px;
-  vertical-align: 13px;
   top: 9px;
   position: absolute;
 }
 
 .header .header__menu .header__menu__items button div input:-ms-input-placeholder {
   font-size: 13px;
-  vertical-align: 13px;
   top: 9px;
   position: absolute;
 }
 
 .header .header__menu .header__menu__items button div input::-ms-input-placeholder {
   font-size: 13px;
-  vertical-align: 13px;
   top: 9px;
   position: absolute;
 }
 
 .header .header__menu .header__menu__items button div input::placeholder {
   font-size: 13px;
-  vertical-align: 13px;
   top: 9px;
   position: absolute;
 }
@@ -173,7 +237,7 @@
   color: #FF673A;
 }
 
-.header .header__menu .header__menu__items .active-item {
-  color: #FF673A;
+.header .active-item {
+  color: #FF673A !important;
 }
 /*# sourceMappingURL=index.css.map */

@@ -19,6 +19,13 @@ class Header extends Component {
   contactus = createRef();
   search = createRef();
   searchbox = createRef();
+  mainpagedrop = createRef();
+  servicesdrop = createRef();
+  portfoliodrop = createRef();
+  articlesdrop = createRef();
+  recruitmentdrop = createRef();
+  aboutasdrop = createRef();
+  contactusdrop = createRef();
   items = [
     this.mainpage,
     this.services,
@@ -27,6 +34,15 @@ class Header extends Component {
     this.recruitment,
     this.aboutas,
     this.contactus,
+  ];
+  itemsdrop = [
+    this.mainpagedrop,
+    this.servicesdrop,
+    this.portfoliodrop,
+    this.articlesdrop,
+    this.recruitmentdrop,
+    this.aboutasdrop,
+    this.contactusdrop,
   ];
   render() {
     return (
@@ -64,23 +80,75 @@ class Header extends Component {
                   <span className="mt-1 d-block"></span>
                 </button>
                 <div className="header__menu__dropdown__items bg-white position-absolute">
-                  <Link to="/" className="text-decoration-none ms-2 me-5">
-                    <li
-                      className="active-item"
-                      ref={this.mainpage}
-                      onClick={this.active(this.mainpage)}
-                    >
-                      صفحه اصلی
-                    </li>
+                  <Link
+                    ref={this.mainpagedrop}
+                    onClick={this.active(this.mainpagedrop)}
+                    to="/"
+                    className="header__menu__dropdown__items__option active-item mt-2 d-block "
+                  >
+                    صفحه اصلی
                   </Link>
-                  <Link to="services" className="text-decoration-none mx-2">
-                    <li
-                      ref={this.services}
-                      onClick={this.active(this.services)}
-                    >
-                      خدمات
-                    </li>
+                  <Link
+                    ref={this.servicesdrop}
+                    onClick={this.activeDrop(this.servicesdrop)}
+                    to="services"
+                    className="header__menu__dropdown__items__option d-block my-2 "
+                  >
+                    خدمات
                   </Link>
+                  <Link
+                    ref={this.portfoliodrop}
+                    onClick={this.activeDrop(this.portfoliodrop)}
+                    to="portfolio"
+                    className="header__menu__dropdown__items__option d-block my-2 "
+                  >
+                    نمونه کارها
+                  </Link>
+                  <Link
+                    ref={this.articlesdrop}
+                    onClick={this.activeDrop(this.articlesdrop)}
+                    to="articles"
+                    className="header__menu__dropdown__items__option  d-block my-2 "
+                  >
+                    مقالات
+                  </Link>
+                  <Link
+                    ref={this.recruitmentdrop}
+                    onClick={this.activeDrop(this.recruitmentdrop)}
+                    to="recruiment"
+                    className="header__menu__dropdown__items__option  d-block my-2 "
+                  >
+                    استخدام
+                  </Link>
+                  <Link
+                    ref={this.abouttusdrop}
+                    onClick={this.activeDrop(this.abouttusdrop)}
+                    to="about-us"
+                    className="header__menu__dropdown__items__option  d-block my-2 "
+                  >
+                    درباره ما
+                  </Link>
+                  <Link
+                    ref={this.contactusdrop}
+                    onClick={this.activeDrop(this.contactusdrop)}
+                    to="contact-us"
+                    className="header__menu__dropdown__items__option  d-block my-2 "
+                  >
+                    تماس با ما
+                  </Link>
+                  <div className="mt-4 position-relative">
+                    <input
+                      type="text"
+                      className="p-3 pe-3"
+                      placeholder="جستجو"
+                    />
+                    <button>
+                      <FontAwesomeIcon
+                        icon={faSearch}
+                        className="fa-search position-absolute"
+                      ></FontAwesomeIcon>
+                    </button>
+                  </div>
                 </div>
               </div>
               <ul className="header__menu__items pt-1 ps-0 d-none">
@@ -116,7 +184,7 @@ class Header extends Component {
                     ref={this.recruitment}
                     onClick={this.active(this.recruitment)}
                   >
-                    استخدادم
+                    استخدام
                   </li>
                 </Link>
                 <Link to="about-us" className="text-decoration-none mx-2">
@@ -167,12 +235,16 @@ class Header extends Component {
     this.items.map((i) => i.current.classList.remove("active-item"));
     item.current.classList.add("active-item");
   };
+  activeDrop = (item) => (e) => {
+    this.itemsdrop.map((i) => i.current.classList.remove("active-item"));
+    item.current.classList.add("active-item");
+  };
   toggleActive = () => {
     this.search.current.classList.toggle("active-item");
     if (this.search.current.classList.contains("active-item")) {
       this.searchbox.current.style.animation = "show 0.5s";
-      this.searchbox.current.style.visibility='visible'
-    }else{
+      this.searchbox.current.style.visibility = "visible";
+    } else {
       this.searchbox.current.style.animation = "hidden 0.5s";
       this.searchbox.current.style.visibility = "hidden";
     }
