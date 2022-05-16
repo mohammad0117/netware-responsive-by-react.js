@@ -3,7 +3,7 @@ import UsaFlag from "../assets/image/usa-flag.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Col, Container, Row } from "react-bootstrap";
-import "../assets/css/index.css";
+import "../assets/css/header.css";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../assets/image/header_logo.min.png";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -71,11 +71,11 @@ class Header extends Component {
                 </span>
               </a>
             </Col>
-            <Col className="header__menu d-flex justify-content-between align-items-center mt-4">
+            <Col className="header__menu d-flex justify-content-between align-items-center mt-5">
               <Link className="header__menu__logo me-2" to="/">
                 <img src={HeaderLogo} alt="header-logo" />
               </Link>
-              <div className="header__menu__dropdown position-relative">
+              <div className="header__menu__dropdown position-relative d-md-none">
                 <button
                   ref={this.dropdownicon}
                   onClick={this.toggleDropDown}
@@ -87,7 +87,6 @@ class Header extends Component {
                 </button>
                 <ul
                   ref={this.dropdownmenu}
-                  onClick={this.toggleDropDown}
                   className="bg-white p-0 position-absolute"
                 >
                   <Link
@@ -97,7 +96,7 @@ class Header extends Component {
                     <li
                       className="active-item"
                       ref={this.mainpagedrop}
-                      onClick={()=>{this.activeDrop(this.mainpagedrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.mainpagedrop)}
                     >
                       صفحه اصلی
                     </li>
@@ -108,7 +107,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.servicesdrop}
-                      onClick={()=>{this.activeDrop(this.servicesdrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.servicesdrop)}
                     >
                       خدمات
                     </li>
@@ -119,7 +118,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.portfoliodrop}
-                      onClick={()=>{this.activeDrop(this.portfoliodrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.portfoliodrop)}
                     >
                       نمونه کارها
                     </li>
@@ -130,7 +129,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.articlesdrop}
-                      onClick={()=>{this.activeDrop(this.articlesdrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.articlesdrop)}
                     >
                       مقالات
                     </li>
@@ -141,7 +140,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.recruitmentdrop}
-                      onClick={()=>{this.activeDrop(this.recruitmentdrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.recruitmentdrop)}
                     >
                       استخدام
                     </li>
@@ -152,7 +151,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.aboutusdrop}
-                      onClick={()=>{this.activeDrop(this.aboutusdrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.aboutusdrop)}
                     >
                       درباره ما
                     </li>
@@ -163,7 +162,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.contactusdrop}
-                      onClick={()=>{this.activeDrop(this.contactusdrop);this.dropDownDisplay()}}
+                      onClick={this.activeDrop(this.contactusdrop)}
                     >
                       تماس با ما
                     </li>
@@ -183,7 +182,7 @@ class Header extends Component {
                   </div>
                 </ul>
               </div>
-              <ul className="header__menu__items pt-1 ps-0 d-none">
+              <ul className="header__menu__items pt-1 ps-0 d-none d-md-block">
                 <Link to="/" className="text-decoration-none ms-2 me-5">
                   <li
                     className="active-item"
@@ -240,6 +239,7 @@ class Header extends Component {
                   <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
                   <div
                     ref={this.searchbox}
+                    onClick={this.toggleActive}
                     className="search-box position-absolute p-2 bg-white"
                     id="s"
                   >
@@ -276,6 +276,8 @@ class Header extends Component {
     if (this.search.current.classList.contains("active-item")) {
       this.searchbox.current.style.animation = "show 0.5s";
       this.searchbox.current.style.visibility = "visible";
+
+      
     } else {
       this.searchbox.current.style.animation = "hidden 0.5s";
       this.searchbox.current.style.visibility = "hidden";
@@ -285,10 +287,7 @@ class Header extends Component {
     this.dropdownicon.current.classList.toggle("show-dropdown");
     this.dropdownmenu.current.classList.toggle("d-block");
   };
-  dropDownDisplay = () => {
-    this.dropdownmenu.current.style.display='block'
-    this.dropdownicon.current.classList.remove("show-dropdown");
-  };
+  
 }
 
 export default Header;
