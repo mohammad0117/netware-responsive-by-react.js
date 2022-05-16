@@ -26,8 +26,8 @@ class Header extends Component {
   recruitmentdrop = createRef();
   aboutusdrop = createRef();
   contactusdrop = createRef();
-  dropdownicon=createRef();
-  dropdownmenu=createRef();
+  dropdownicon = createRef();
+  dropdownmenu = createRef();
   items = [
     this.mainpage,
     this.services,
@@ -85,7 +85,11 @@ class Header extends Component {
                   <span className="line-two mt-1 d-block"></span>
                   <span className="line-three mt-1 d-block"></span>
                 </button>
-                <ul ref={this.dropdownmenu} onClick={this.toggleDropDown} className="bg-white p-0 position-absolute">
+                <ul
+                  ref={this.dropdownmenu}
+                  onClick={this.toggleDropDown}
+                  className="bg-white p-0 position-absolute"
+                >
                   <Link
                     to="/"
                     className="header__menu__dropdown__option mt-2 d-block"
@@ -93,7 +97,7 @@ class Header extends Component {
                     <li
                       className="active-item"
                       ref={this.mainpagedrop}
-                      onClick={this.activeDrop(this.mainpagedrop)}
+                      onClick={()=>{this.activeDrop(this.mainpagedrop);this.dropDownDisplay()}}
                     >
                       صفحه اصلی
                     </li>
@@ -104,7 +108,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.servicesdrop}
-                      onClick={this.activeDrop(this.servicesdrop)}
+                      onClick={()=>{this.activeDrop(this.servicesdrop);this.dropDownDisplay()}}
                     >
                       خدمات
                     </li>
@@ -115,7 +119,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.portfoliodrop}
-                      onClick={this.activeDrop(this.portfoliodrop)}
+                      onClick={()=>{this.activeDrop(this.portfoliodrop);this.dropDownDisplay()}}
                     >
                       نمونه کارها
                     </li>
@@ -126,7 +130,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.articlesdrop}
-                      onClick={this.activeDrop(this.articlesdrop)}
+                      onClick={()=>{this.activeDrop(this.articlesdrop);this.dropDownDisplay()}}
                     >
                       مقالات
                     </li>
@@ -137,7 +141,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.recruitmentdrop}
-                      onClick={this.activeDrop(this.recruitmentdrop)}
+                      onClick={()=>{this.activeDrop(this.recruitmentdrop);this.dropDownDisplay()}}
                     >
                       استخدام
                     </li>
@@ -148,7 +152,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.aboutusdrop}
-                      onClick={this.activeDrop(this.aboutusdrop)}
+                      onClick={()=>{this.activeDrop(this.aboutusdrop);this.dropDownDisplay()}}
                     >
                       درباره ما
                     </li>
@@ -159,7 +163,7 @@ class Header extends Component {
                   >
                     <li
                       ref={this.contactusdrop}
-                      onClick={this.activeDrop(this.contactusdrop)}
+                      onClick={()=>{this.activeDrop(this.contactusdrop);this.dropDownDisplay()}}
                     >
                       تماس با ما
                     </li>
@@ -277,13 +281,14 @@ class Header extends Component {
       this.searchbox.current.style.visibility = "hidden";
     }
   };
-  toggleDropDown=()=>{
-    this.dropdownicon.current.classList.toggle('show-dropdown')
+  toggleDropDown = () => {
+    this.dropdownicon.current.classList.toggle("show-dropdown");
     this.dropdownmenu.current.classList.toggle("d-block");
-  }
-  dropDownDisplay=()=>{
-    
-  }
+  };
+  dropDownDisplay = () => {
+    this.dropdownmenu.current.style.display='block'
+    this.dropdownicon.current.classList.remove("show-dropdown");
+  };
 }
 
 export default Header;
