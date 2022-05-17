@@ -1,4 +1,35 @@
 .main-page .main-page__desc {
+  padding: 0 223px;
   background-color: #F9FAFE;
+  padding-top: 60px;
+}
+
+.main-page .main-page__desc .main-page__desc__right-side {
+  padding-left: 25px;
+}
+
+.main-page .main-page__desc .main-page__desc__right-side p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.main-page .main-page__desc .main-page__desc__right-side ul li:nth-child(1)::after {
+  display: none;
+}
+
+.main-page .main-page__desc .main-page__desc__right-side ul li::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: -25px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FF673A;
+}
+
+.main-page .main-page__desc .main-page__desc__right-side div button {
+  padding: 10px 30px;
+  border-radius: 30px;
 }
 /*# sourceMappingURL=main-page.css.map */
