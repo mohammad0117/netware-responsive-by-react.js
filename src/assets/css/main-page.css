@@ -1,6 +1,17 @@
-.main-page .main-page__desc {
-  padding: 0 223px;
+@media screen and (max-width: 1023px) {
+  .main-page__desc .main-page__desc__right-side div button {
+    border-radius: 15px !important;
+  }
+  .main-page__desc .main-page__desc__right-side div button span:nth-child(1) {
+    font-size: 50px !important;
+  }
+}
+
+.main-page {
   background-color: #F9FAFE;
+}
+
+.main-page .main-page__desc {
   padding-top: 60px;
   padding-bottom: 100px;
   margin-bottom: 100px;
@@ -37,7 +48,7 @@
 }
 
 .main-page .main-page__desc .main-page__desc__right-side div button span:nth-child(1) {
-  font-size: 50px;
+  font-size: 30px;
   border-radius: 50%;
   font-weight: 700;
   background-color: #F8F1EB;

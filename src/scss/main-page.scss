@@ -1,29 +1,51 @@
-.main-page{
-    .main-page__desc{
-        padding: 0 223px;
-        background-color: #F9FAFE;
+//custom media
+@media screen and (max-width: 1023px) {
+    .main-page__desc {
+        .main-page__desc__right-side {
+            div {
+                button {
+                    border-radius: 15px !important;
+
+                    span:nth-child(1) {
+                        font-size: 50px !important;
+
+                    }
+                }
+            }
+        }
+    }
+}
+.main-page {
+    background-color: #F9FAFE;
+
+    .main-page__desc {
+        // padding: 0 223px;
         padding-top: 60px;
         padding-bottom: 100px;
         margin-bottom: 100px;
-        .main-page__desc__right-side{
+
+        .main-page__desc__right-side {
             padding-left: 25px;
-            p{
+
+            p {
                 font-size: 18px;
                 font-weight: 400;
             }
-            ul{
-                li:nth-child(1){
-                    &::after{
-                        display: 
-                        none;
+
+            ul {
+                li:nth-child(1) {
+                    &::after {
+                        display:
+                            none;
                     }
                 }
-                li{
-                    &::after{
+
+                li {
+                    &::after {
                         content: '';
                         position: absolute;
                         top: 12px;
-                        right:-25px;
+                        right: -25px;
                         width: 8px;
                         height: 8px;
                         border-radius: 50%;
@@ -31,27 +53,32 @@
                     }
                 }
             }
-            div{
-                button{
+
+            div {
+                button {
                     border-radius: 70px;
                     background-color: #fff;
                     border: none;
-                    span:nth-child(1){
-                        font-size: 50px;
+
+                    span:nth-child(1) {
+                        font-size: 30px;
                         border-radius: 50%;
                         font-weight: 700;
                         background-color: #F8F1EB;
                         color: #FF673A;
-                        
+
                     }
                 }
             }
         }
-        .main-page__desc__left-side{
-            img{
+
+        .main-page__desc__left-side {
+
+            // padding-right: 100px;
+            img {
                 width: 450px;
                 height: 500px;
-                border-radius:0 0 50px 0;
+                border-radius: 0 0 50px 0;
             }
         }
     }
