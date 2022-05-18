@@ -2,6 +2,8 @@
   padding: 0 223px;
   background-color: #F9FAFE;
   padding-top: 60px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .main-page .main-page__desc .main-page__desc__right-side {
@@ -29,7 +31,22 @@
 }
 
 .main-page .main-page__desc .main-page__desc__right-side div button {
-  padding: 10px 30px;
-  border-radius: 30px;
+  border-radius: 70px;
+  background-color: #fff;
+  border: none;
+}
+
+.main-page .main-page__desc .main-page__desc__right-side div button span:nth-child(1) {
+  font-size: 50px;
+  border-radius: 50%;
+  font-weight: 700;
+  background-color: #F8F1EB;
+  color: #FF673A;
+}
+
+.main-page .main-page__desc .main-page__desc__left-side img {
+  width: 450px;
+  height: 500px;
+  border-radius: 0 0 50px 0;
 }
 /*# sourceMappingURL=main-page.css.map */

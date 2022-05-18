@@ -57,7 +57,7 @@ class Header extends Component {
             >
               <Link
                 className="header__bar__link me-2 me-sm-5 me-md-5 me-lg-5"
-                to="main-page"
+                to="/"
               >
                 <img src={UsaFlag} alt="usa-flag" />
               </Link>

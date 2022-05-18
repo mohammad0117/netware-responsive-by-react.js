@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../assets/css/main-page.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
+import softWareCompany from "../assets/image/software_development.jpg";
 class MainPage extends Component {
     state = {  } 
     render() { 
@@ -12,7 +13,7 @@ class MainPage extends Component {
             <Container fluid className="main-page mt-5 p-0" dir="rtl">
               <Col xs={12} className="main-page__desc">
                 <Row>
-                  <Col xs={6} className="main-page__desc__right-side pt-5">
+                  <Col xs={6} className="main-page__desc__right-side pt-5 pe-0">
                     <p>استودیو دیجیتال مارکتینگ نت ابزار</p>
                     <h1 className="mt-2">
                       ارائـه خدمات هوشـمند برای رونـق کسـب و کـار شـما
@@ -29,22 +30,29 @@ class MainPage extends Component {
                       </li>
                     </ul>
                     <div className="mt-5 d-flex justify-content-between">
-                      <Link to="/" className="mt-5">
-                        <button className='d-flex align-items-center'>
-                          <span className='mx-2'>G</span>
-                          همکار رسمی گوگل در ایران
+                      <Link to="/" className="mt-5 text-decoration-none">
+                        <button className="shadow d-flex align-items-center pe-2 ps-4 py-3">
+                          <span className="px-3">G</span>
+                          <span className="mx-3">
+                            <b className="d-block">همکار رسمی گوگل</b> در ایران
+                          </span>
                         </button>
                       </Link>
-                      <Link to="/" className="mt-5">
-                        <button>
-                          مشاوره تخصصی به صورت رایگان
-                          <FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon>
+                      <Link to="/" className="mt-5 text-decoration-none">
+                        <button className="shadow d-flex align-items-center pe-2 ps-4 py-3">
+                          <span className="px-3">
+                            <FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon>
+                          </span>
+                          <span className="mx-3">
+                            <b className="d-block">مشاوره تخصصی</b> به صورت
+                            رایگان
+                          </span>
                         </button>
                       </Link>
                     </div>
                   </Col>
-                  <Col xs={6} className="bg-danger">
-                    123
+                  <Col xs={6} className="main-page__desc__left-side pt-5 pe-5">
+                    <img src={softWareCompany} alt="software-company" />
                   </Col>
                 </Row>
               </Col>
