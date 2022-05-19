@@ -92,6 +92,8 @@
 }
 
 .main-page .main-page__button {
+  border: none;
+  display: none;
   left: 20px;
   bottom: 0;
   border-radius: 50%;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../assets/css/main-page.css";
@@ -8,6 +8,7 @@ import softWareCompany from "../assets/image/software_development.jpg";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 class MainPage extends Component {
   state = {};
+  scrolltopbutton = createRef();
   render() {
     return (
       <>
@@ -65,17 +66,36 @@ class MainPage extends Component {
                 <img src={softWareCompany} alt="software-company" />
               </Col>
             </Row>
-            <span className="main-page__button position-absolute">
+            <button
+              onClick={this.scrollTop}
+              ref={this.scrolltopbutton}
+              className="main-page__button position-absolute"
+            >
               <FontAwesomeIcon
                 icon={faAngleUp}
                 className="fa-angle-up"
               ></FontAwesomeIcon>
-            </span>
+            </button>
           </Col>
         </Container>
       </>
     );
   }
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        this.scrolltopbutton.current.style.display = "block";
+      } else {
+        this.scrolltopbutton.current.style.display = "none";
+      }
+    });
+  }
+  scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 }
 
 export default MainPage;
