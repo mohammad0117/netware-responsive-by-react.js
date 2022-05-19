@@ -1,25 +1,63 @@
 //custom media
-@media screen and (max-width: 1023px) {
-    .main-page__desc {
-        .main-page__desc__right-side {
-            div {
-                button {
-                    border-radius: 15px !important;
+@media screen and (max-width: 1024px) {
+    .main-page__desc__right-side {
+        div {
+            button {
+                border-radius: 15px !important;
 
-                    span:nth-child(1) {
-                        font-size: 50px !important;
+                span:nth-child(1) {
+                    font-size: 50px !important;
 
-                    }
                 }
             }
         }
     }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1028px) {
+    .main-page__desc__right-side {
+        padding-right: 46px !important;
+
+        div {
+            button {
+                span:nth-child(1) {
+                    font-size: 30px !important;
+                }
+            }
+        }
+
+    }
+
+    .main-page__desc__left-side {
+        padding-left: 78px !important;
+    }
+}
+
+@media screen and (min-width: 1029px) {
+    .main-page__desc__right-side {
+        padding-right: 152px !important;
+    }
+
+    .main-page__desc__left-side {
+        padding-left: 95px !important;
+    }
+
+}
+
+@media screen and (min-width: 1535px) {
+    .main-page__desc__right-side {
+        padding-right: 190px !important;
+    }
+
+    .main-page__desc__left-side {
+        padding-left: 114px !important;
+    }
+}
+
 .main-page {
     background-color: #F9FAFE;
 
     .main-page__desc {
-        // padding: 0 223px;
         padding-top: 60px;
         padding-bottom: 100px;
         margin-bottom: 100px;
@@ -61,7 +99,7 @@
                     border: none;
 
                     span:nth-child(1) {
-                        font-size: 30px;
+                        font-size: 50px;
                         border-radius: 50%;
                         font-weight: 700;
                         background-color: #F8F1EB;
@@ -80,6 +118,17 @@
                 height: 500px;
                 border-radius: 0 0 50px 0;
             }
+        }
+    }
+        .main-page__button{
+        left: 20px;
+        bottom:0;
+        border-radius: 50%;
+        padding: 5px 10px;
+        background-color: #7C7D7F;
+        color: #fff;
+        .fa-angle-up{
+            font-size: 30px;
         }
     }
 }
