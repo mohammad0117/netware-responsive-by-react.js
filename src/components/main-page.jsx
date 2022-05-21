@@ -6,14 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import softWareCompany from "../assets/image/software_development.jpg";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import softWareDeveloper from '../assets/image/software_developer.jpeg'
+import { faTimeline } from "@fortawesome/free-solid-svg-icons";
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
   render() {
     return (
       <>
-        <Container fluid className="main-page mt-4" dir="rtl">
-          <Col xs={12} className="main-page__desc position-relative">
+        <Container fluid className="main-page mt-4 p-0" dir="rtl">
+          <Col xs={12} className="main-page__desc position-relative px-3">
             <Row className="flex-column-reverse flex-lg-row">
               <Col
                 xs={12}
@@ -76,6 +78,45 @@ class MainPage extends Component {
                 className="fa-angle-up"
               ></FontAwesomeIcon>
             </button>
+          </Col>
+          <Col xs={12} className="main-page__items">
+            <Row>
+              <Col xxl={4} className="main-page__items__card">
+                <div className="first">
+                  <img src={softWareDeveloper} alt="" />
+                </div>
+              </Col>
+              <Col xxl={4} className="main-page__items__card">
+                <div className="second d-flex flex-column justify-content-center">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faTimeline}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">بازاریابی آنلاین</button>
+                  </div>
+                  <p className="text-center px-3">
+                    کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات در
+                    گوگل
+                  </p>
+                </div>
+              </Col>
+              <Col xxl={4} className="main-page__items__card">
+                123
+              </Col>
+            </Row>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </Col>
         </Container>
       </>
