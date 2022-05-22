@@ -8,6 +8,10 @@ import softWareCompany from "../assets/image/software_development.jpg";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import softWareDeveloper from '../assets/image/software_developer.jpeg'
 import { faTimeline } from "@fortawesome/free-solid-svg-icons";
+import { faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlassPlus } from "@fortawesome/free-solid-svg-icons";
+import woman from '../assets/image/woman_fontware_eng.webp'
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
@@ -71,7 +75,7 @@ class MainPage extends Component {
             <button
               onClick={this.scrollTop}
               ref={this.scrolltopbutton}
-              className="main-page__button position-absolute"
+              className="main-page__button"
             >
               <FontAwesomeIcon
                 icon={faAngleUp}
@@ -81,12 +85,12 @@ class MainPage extends Component {
           </Col>
           <Col xs={12} className="main-page__items">
             <Row>
-              <Col xxl={4} className="main-page__items__card">
-                <div className="first">
+              <Col xs={4}>
+                <div className="picture">
                   <img src={softWareDeveloper} alt="" />
                 </div>
               </Col>
-              <Col xxl={4} className="main-page__items__card">
+              <Col xs={4}>
                 <div className="second d-flex flex-column justify-content-center">
                   <FontAwesomeIcon
                     className="fa-time-line mt-5"
@@ -101,10 +105,51 @@ class MainPage extends Component {
                   </p>
                 </div>
               </Col>
-              <Col xxl={4} className="main-page__items__card">
-                123
+              <Col xs={4}>
+                <div className="third d-flex flex-column justify-content-center">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faPalette}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">طراحی گرافیکی</button>
+                  </div>
+                  <p className="text-center px-3">
+                    طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی وب
+                  </p>
+                </div>
+              </Col>
+              <Col xs={4}>
+                <div className="fourth d-flex flex-column justify-content-center">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faFileAlt}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">نرم افزار سفارشی</button>
+                  </div>
+                  <p className="text-center px-4">
+                    طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
+                    نگهداری
+                  </p>
+                </div>
               </Col>
             </Row>
+            {/* <div className="fifth d-flex flex-column justify-content-center">
+              <FontAwesomeIcon
+                className="fa-time-line mt-5"
+                icon={faMagnifyingGlassPlus}
+              ></FontAwesomeIcon>
+              <div className="text-center my-4">
+                <button className="">خدمات سیو</button>
+              </div>
+              <p className="text-center px-3">
+                افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات رقابتی
+              </p>
+            </div>
+            <div className="picture">
+              <img src={woman} alt="" />
+            </div> */}
             <br />
             <br />
             <br />

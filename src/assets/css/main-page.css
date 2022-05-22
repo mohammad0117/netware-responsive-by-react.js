@@ -89,32 +89,41 @@
 }
 
 .main-page .main-page__items {
-  padding: 0 230px !important;
+  padding-right: 230px;
+  padding-left: 205px;
 }
 
-.main-page .main-page__items .main-page__items__card div {
+.main-page .main-page__items div {
   width: 330px;
   height: 330px;
   border-radius: 10px;
 }
 
-.main-page .main-page__items .main-page__items__card .first img {
+.main-page .main-page__items .picture img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
 }
 
-.main-page .main-page__items .main-page__items__card .second {
-  border-radius: 10px;
+.main-page .main-page__items .second,
+.main-page .main-page__items .third,
+.main-page .main-page__items .fourth,
+.main-page .main-page__items .fifth {
   background-color: #FF7E6D;
   color: #fff;
 }
 
-.main-page .main-page__items .main-page__items__card .second .fa-time-line {
+.main-page .main-page__items .second .fa-time-line,
+.main-page .main-page__items .third .fa-time-line,
+.main-page .main-page__items .fourth .fa-time-line,
+.main-page .main-page__items .fifth .fa-time-line {
   font-size: 40px;
 }
 
-.main-page .main-page__items .main-page__items__card .second div button {
+.main-page .main-page__items .second div button,
+.main-page .main-page__items .third div button,
+.main-page .main-page__items .fourth div button,
+.main-page .main-page__items .fifth div button {
   border: none;
   background-color: transparent;
   font-size: 23px;
@@ -122,15 +131,31 @@
   font-weight: 500;
 }
 
-.main-page .main-page__items .main-page__items__card .second p {
+.main-page .main-page__items .second p,
+.main-page .main-page__items .third p,
+.main-page .main-page__items .fourth p,
+.main-page .main-page__items .fifth p {
   margin-bottom: 130px;
 }
 
+.main-page .main-page__items .third {
+  background-color: #FFCC3B;
+}
+
+.main-page .main-page__items .fourth {
+  background-color: #27CBA4;
+}
+
+.main-page .main-page__items .fifth {
+  background-color: #4878E6;
+}
+
 .main-page .main-page__button {
+  position: fixed;
   border: none;
   display: none;
-  left: 20px;
-  bottom: 0;
+  left: 30px;
+  bottom: 40px;
   border-radius: 50%;
   padding: 5px 10px;
   background-color: #7C7D7F;

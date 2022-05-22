@@ -122,54 +122,68 @@
     }
 
     .main-page__items {
-        padding: 0 230px !important;
-
-        .main-page__items__card {
-            div {
-                width: 330px;
-                height: 330px;
-                border-radius: 10px;
-            }
-
-            .first {
-                img {
-                    border-radius: 10px;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            .second {
-                border-radius: 10px;
-                background-color: #FF7E6D;
-                color: #fff;
-
-                .fa-time-line {
-                    font-size: 40px;
-                }
-
-                div {
-                    button {
-                        border: none;
-                        background-color: transparent;
-                        font-size: 23px;
-                        color: #fff;
-                        font-weight: 500;
-                    }
-                }
-
-                p {
-                    margin-bottom: 130px;
-                }
-            }
-        }
+        padding-right: 230px;
+        padding-left: 205px;
+                    div {
+                            width: 330px;
+                            height: 330px;
+                            border-radius: 10px;
+                        }
+                    
+                        .picture {
+                    
+                            img {
+                                border-radius: 10px;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    
+                        .second,
+                        .third,
+                        .fourth,
+                        .fifth {
+                            background-color: #FF7E6D;
+                            color: #fff;
+                    
+                            .fa-time-line {
+                                font-size: 40px;
+                            }
+                    
+                            div {
+                                button {
+                                    border: none;
+                                    background-color: transparent;
+                                    font-size: 23px;
+                                    color: #fff;
+                                    font-weight: 500;
+                                }
+                            }
+                    
+                            p {
+                                margin-bottom: 130px;
+                            }
+                        }
+                    
+                        .third {
+                            background-color: #FFCC3B;
+                        }
+                    
+                        .fourth {
+                            background-color: #27CBA4;
+                        }
+                    
+                        .fifth {
+                            background-color: #4878E6;
+                        }
     }
 
     .main-page__button {
+        position: fixed;
         border: none;
         display: none;
-        left: 20px;
-        bottom: 0;
+        left: 30px;
+        bottom: 40px;
         border-radius: 50%;
         padding: 5px 10px;
         background-color: #7C7D7F;
