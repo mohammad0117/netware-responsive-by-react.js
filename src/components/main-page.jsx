@@ -84,84 +84,65 @@ class MainPage extends Component {
             </button>
           </Col>
           <Col xs={12} className="main-page__items">
-            <Row>
-              <Col xs={4}>
-                <div className="picture">
-                  <img src={softWareDeveloper} alt="" />
-                </div>
-              </Col>
-              <Col xs={4}>
-                <div className="second d-flex flex-column justify-content-center">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faTimeline}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">بازاریابی آنلاین</button>
-                  </div>
-                  <p className="text-center px-3">
-                    کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات در
-                    گوگل
-                  </p>
-                </div>
-              </Col>
-              <Col xs={4}>
-                <div className="third d-flex flex-column justify-content-center">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faPalette}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">طراحی گرافیکی</button>
-                  </div>
-                  <p className="text-center px-3">
-                    طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی وب
-                  </p>
-                </div>
-              </Col>
-              <Col xs={4}>
-                <div className="fourth d-flex flex-column justify-content-center">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faFileAlt}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">نرم افزار سفارشی</button>
-                  </div>
-                  <p className="text-center px-4">
-                    طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
-                    نگهداری
-                  </p>
-                </div>
-              </Col>
-            </Row>
-            {/* <div className="fifth d-flex flex-column justify-content-center">
-              <FontAwesomeIcon
-                className="fa-time-line mt-5"
-                icon={faMagnifyingGlassPlus}
-              ></FontAwesomeIcon>
-              <div className="text-center my-4">
-                <button className="">خدمات سیو</button>
+            <div className="main-page__items__wrapper d-flex py-3">
+              <div className="picture d-none">
+                <img src={softWareDeveloper} alt="" />
               </div>
-              <p className="text-center px-3">
-                افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات رقابتی
-              </p>
+              <div className="second d-flex flex-column justify-content-center mx-3">
+                <FontAwesomeIcon
+                  className="fa-time-line mt-5"
+                  icon={faTimeline}
+                ></FontAwesomeIcon>
+                <div className="text-center my-4">
+                  <button className="">بازاریابی آنلاین</button>
+                </div>
+                <p className="text-center px-3">
+                  کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات در
+                  گوگل
+                </p>
+              </div>
+              <div className="third d-flex flex-column justify-content-center mx-3">
+                <FontAwesomeIcon
+                  className="fa-time-line mt-5"
+                  icon={faPalette}
+                ></FontAwesomeIcon>
+                <div className="text-center my-4">
+                  <button className="">طراحی گرافیکی</button>
+                </div>
+                <p className="text-center px-3">
+                  طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی وب
+                </p>
+              </div>
+              <div className="fourth d-flex flex-column justify-content-center mx-3 pt-4">
+                <FontAwesomeIcon
+                  className="fa-time-line mt-5"
+                  icon={faFileAlt}
+                ></FontAwesomeIcon>
+                <div className="text-center my-4">
+                  <button className="">نرم افزار سفارشی</button>
+                </div>
+                <p className="text-center px-4">
+                  طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
+                  نگهداری
+                </p>
+              </div>
+              <div className="fifth d-flex flex-column justify-content-center mx-3">
+                <FontAwesomeIcon
+                  className="fa-time-line mt-5"
+                  icon={faMagnifyingGlassPlus}
+                ></FontAwesomeIcon>
+                <div className="text-center my-4">
+                  <button className="">خدمات سیو</button>
+                </div>
+                <p className="text-center px-3">
+                  افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات
+                  رقابتی
+                </p>
+              </div>
+              <div className="picture mt-5 d-none">
+                <img src={woman} alt="" />
+              </div>
             </div>
-            <div className="picture">
-              <img src={woman} alt="" />
-            </div> */}
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </Col>
         </Container>
       </>
