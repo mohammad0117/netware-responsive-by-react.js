@@ -83,65 +83,77 @@ class MainPage extends Component {
               ></FontAwesomeIcon>
             </button>
           </Col>
-          <Col xs={12} className="main-page__items">
-            <div className="main-page__items__wrapper d-flex py-3">
-              <div className="picture d-none">
-                <img src={softWareDeveloper} alt="" />
-              </div>
-              <div className="second d-flex flex-column justify-content-center mx-3">
-                <FontAwesomeIcon
-                  className="fa-time-line mt-5"
-                  icon={faTimeline}
-                ></FontAwesomeIcon>
-                <div className="text-center my-4">
-                  <button className="">بازاریابی آنلاین</button>
+          <Col xs={12} className="main-page__items px-3">
+            <div className="main-page__items__wrapper grid d-flex pt-3 ps-3 pt-lg-0 ps-lg-0 p-3">
+              <Col  className="d-none d-lg-block">
+                <div className="main-page__items__wrapper__card picture px-0">
+                  <img src={softWareDeveloper} alt="" />
                 </div>
-                <p className="text-center px-3">
-                  کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات در
-                  گوگل
-                </p>
-              </div>
-              <div className="third d-flex flex-column justify-content-center mx-3">
-                <FontAwesomeIcon
-                  className="fa-time-line mt-5"
-                  icon={faPalette}
-                ></FontAwesomeIcon>
-                <div className="text-center my-4">
-                  <button className="">طراحی گرافیکی</button>
+              </Col>
+              <Col>
+                <div className="main-page__items__wrapper__card second d-flex flex-column justify-content-center ms-3 ms-lg-0 mx-lg-4 pt-lg-5">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faTimeline}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">بازاریابی آنلاین</button>
+                  </div>
+                  <p className="text-center px-3">
+                    کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات در
+                    گوگل
+                  </p>
                 </div>
-                <p className="text-center px-3">
-                  طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی وب
-                </p>
-              </div>
-              <div className="fourth d-flex flex-column justify-content-center mx-3 pt-4">
-                <FontAwesomeIcon
-                  className="fa-time-line mt-5"
-                  icon={faFileAlt}
-                ></FontAwesomeIcon>
-                <div className="text-center my-4">
-                  <button className="">نرم افزار سفارشی</button>
+              </Col>
+              <Col>
+                <div className="main-page__items__wrapper__card third d-flex flex-column justify-content-center mx-3 mx-lg-0 pt-lg-5">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faPalette}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">طراحی گرافیکی</button>
+                  </div>
+                  <p className="text-center px-3">
+                    طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی وب
+                  </p>
                 </div>
-                <p className="text-center px-4">
-                  طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
-                  نگهداری
-                </p>
-              </div>
-              <div className="fifth d-flex flex-column justify-content-center mx-3">
-                <FontAwesomeIcon
-                  className="fa-time-line mt-5"
-                  icon={faMagnifyingGlassPlus}
-                ></FontAwesomeIcon>
-                <div className="text-center my-4">
-                  <button className="">خدمات سیو</button>
+              </Col>
+              <Col>
+                <div className="main-page__items__wrapper__card fourth d-flex flex-column justify-content-center mx-3 mx-lg-0  pt-4 mt-lg-4">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faFileAlt}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">نرم افزار سفارشی</button>
+                  </div>
+                  <p className="text-center px-4">
+                    طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
+                    نگهداری
+                  </p>
                 </div>
-                <p className="text-center px-3">
-                  افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات
-                  رقابتی
-                </p>
-              </div>
-              <div className="picture mt-5 d-none">
-                <img src={woman} alt="" />
-              </div>
+              </Col>
+              <Col>
+                <div className="main-page__items__wrapper__card fifth d-flex flex-column justify-content-center mx-3 mx-lg-4 mt-lg-4 pt-lg-5">
+                  <FontAwesomeIcon
+                    className="fa-time-line mt-5"
+                    icon={faMagnifyingGlassPlus}
+                  ></FontAwesomeIcon>
+                  <div className="text-center my-4">
+                    <button className="">خدمات سیو</button>
+                  </div>
+                  <p className="text-center px-3">
+                    افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات
+                    رقابتی
+                  </p>
+                </div>
+              </Col>
+              <Col className="d-none d-lg-block">
+                <div className="main-page__items__wrapper__card picture  d-none d-lg-block px-0  mt-lg-4">
+                  <img src={woman} alt="" />
+                </div>
+              </Col>
             </div>
           </Col>
         </Container>
