@@ -93,6 +93,7 @@ $defaualt-orange-color: #FF673A;
 
   .header__menu {
     .header__menu__dropdown {
+      z-index: 10;
       .header__menu__dropdown__icon {
         background-color: transparent;
         border: none;
@@ -111,6 +112,7 @@ $defaualt-orange-color: #FF673A;
         right: -438px;
 
         .header__menu__dropdown__option {
+          padding-right: 20px;
           list-style: none;
           text-decoration: none;
           color: #353535;
@@ -126,7 +128,7 @@ $defaualt-orange-color: #FF673A;
 
       div {
         width: 300px;
-
+        padding-right: 20px;
         input {
           width: 300px;
           background-color: #ECECEC;
@@ -199,6 +201,7 @@ $defaualt-orange-color: #FF673A;
         border: none;
 
         div {
+          z-index:10;
           visibility: hidden;
           border: 2px solid #ECECEC;
           left: -3px;

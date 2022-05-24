@@ -97,6 +97,10 @@
   color: #fff;
 }
 
+.header .header__menu .header__menu__dropdown {
+  z-index: 10;
+}
+
 .header .header__menu .header__menu__dropdown .header__menu__dropdown__icon {
   background-color: transparent;
   border: none;
@@ -116,6 +120,7 @@
 }
 
 .header .header__menu .header__menu__dropdown ul .header__menu__dropdown__option {
+  padding-right: 20px;
   list-style: none;
   text-decoration: none;
   color: #353535;
@@ -131,6 +136,7 @@
 
 .header .header__menu .header__menu__dropdown div {
   width: 300px;
+  padding-right: 20px;
 }
 
 .header .header__menu .header__menu__dropdown div input {
@@ -229,6 +235,7 @@
 }
 
 .header .header__menu .header__menu__items button div {
+  z-index: 10;
   visibility: hidden;
   border: 2px solid #ECECEC;
   left: -3px;
