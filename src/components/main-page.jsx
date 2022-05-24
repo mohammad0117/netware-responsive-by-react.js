@@ -83,15 +83,15 @@ class MainPage extends Component {
               ></FontAwesomeIcon>
             </button>
           </Col>
-          <Col xs={12} className="main-page__items px-3">
-            <div className="main-page__items__wrapper grid d-flex pt-3 ps-3 pt-lg-0 ps-lg-0 p-3">
-              <Col  className="d-none d-lg-block">
+          <Col xs={12} className="main-page__items px-lg-3">
+            <div className="main-page__items__wrapper grid pt-3 py-lg-5">
+              <Col lg={4} className="d-none d-lg-block">
                 <div className="main-page__items__wrapper__card picture px-0">
                   <img src={softWareDeveloper} alt="" />
                 </div>
               </Col>
-              <Col>
-                <div className="main-page__items__wrapper__card second d-flex flex-column justify-content-center ms-3 ms-lg-0 mx-lg-4 pt-lg-5">
+              <Col lg={4}>
+                <div className="main-page__items__wrapper__card second d-flex flex-column justify-content-center mx-3 mx-lg-0  pt-lg-5">
                   <FontAwesomeIcon
                     className="fa-time-line mt-5"
                     icon={faTimeline}
@@ -105,7 +105,7 @@ class MainPage extends Component {
                   </p>
                 </div>
               </Col>
-              <Col>
+              <Col lg={4}>
                 <div className="main-page__items__wrapper__card third d-flex flex-column justify-content-center mx-3 mx-lg-0 pt-lg-5">
                   <FontAwesomeIcon
                     className="fa-time-line mt-5"
@@ -119,8 +119,8 @@ class MainPage extends Component {
                   </p>
                 </div>
               </Col>
-              <Col>
-                <div className="main-page__items__wrapper__card fourth d-flex flex-column justify-content-center mx-3 mx-lg-0  pt-4 mt-lg-4">
+              <Col lg={4}>
+                <div className="main-page__items__wrapper__card fourth d-flex flex-column justify-content-center mx-3 mx-lg-0 pt-4 pt-lg-5 mt-lg-5">
                   <FontAwesomeIcon
                     className="fa-time-line mt-5"
                     icon={faFileAlt}
@@ -134,8 +134,8 @@ class MainPage extends Component {
                   </p>
                 </div>
               </Col>
-              <Col>
-                <div className="main-page__items__wrapper__card fifth d-flex flex-column justify-content-center mx-3 mx-lg-4 mt-lg-4 pt-lg-5">
+              <Col lg={4}>
+                <div className="main-page__items__wrapper__card fifth d-flex flex-column justify-content-center mx-3 mx-lg-0 mt-lg-5 pt-lg-4">
                   <FontAwesomeIcon
                     className="fa-time-line mt-5"
                     icon={faMagnifyingGlassPlus}
@@ -149,8 +149,8 @@ class MainPage extends Component {
                   </p>
                 </div>
               </Col>
-              <Col className="d-none d-lg-block">
-                <div className="main-page__items__wrapper__card picture  d-none d-lg-block px-0  mt-lg-4">
+              <Col lg={4} className="d-none d-lg-block">
+                <div className="main-page__items__wrapper__card picture  d-none d-lg-block px-0 mt-lg-5">
                   <img src={woman} alt="" />
                 </div>
               </Col>

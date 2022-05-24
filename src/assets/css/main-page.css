@@ -39,6 +39,9 @@
 
 @media screen and (max-width: 505px) {
   .main-page__items__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 484px;
     overflow-x: scroll;
     height: 330px;
@@ -46,6 +49,10 @@
 }
 
 @media screen and (min-width: 1023px) {
+  .main-page__items__wrapper {
+    padding-right: 67px;
+    padding-left: 41px;
+  }
   .grid {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -57,6 +64,24 @@
     margin-top: calc(-1 * var(--bs-gutter-y));
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main-page__items__wrapper {
+    padding-right: 188px;
+    padding-left: 138px;
+  }
+  .main-page__items__wrapper__card {
+    width: 330px !important;
+    height: 330px !important;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .main-page__items__wrapper {
+    padding-right: 223px;
+    padding-left: 151px;
   }
 }
 
