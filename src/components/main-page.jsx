@@ -14,9 +14,11 @@ import { faMagnifyingGlassPlus } from "@fortawesome/free-solid-svg-icons";
 import woman from "../assets/image/woman_fontware_eng.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import exPic from '../assets/image/experience.jpg'
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
+  button = createRef();
   render() {
     return (
       <>
@@ -29,44 +31,46 @@ class MainPage extends Component {
                 data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="900"
-                className="main-page__desc__right-side pt-5"
+                className="pt-5"
               >
-                <p className="text-center text-lg-end">
-                  استودیو دیجیتال مارکتینگ نت ابزار
-                </p>
-                <h1 className="mt-2 text-center text-lg-end">
-                  ارائـه خدمات هوشـمند برای رونـق کسـب و کـار شـما
-                </h1>
-                <ul className="p-0  mt-4 mt-lg-5 text-center text-lg-end">
-                  <li className="d-inline-block me-1 ms-4 position-relative">
-                    برنامه ریزی
-                  </li>
-                  <li className="d-inline-block mx-4 position-relative">
-                    طراحی
-                  </li>
-                  <li className="d-inline-block mx-4 position-relative">
-                    توسعه
-                  </li>
-                </ul>
-                <div className=" d-flex justify-content-around  px-xxl-0 justify-content-lg-between">
-                  <Link to="/" className="mt-5 text-decoration-none">
-                    <button className="shadow d-flex flex-column align-items-center justify-content-center px-1 py-4 me-4 flex-lg-row py-lg-3 me-lg-0 px-lg-3">
-                      <span className="px-3 p-lg-2 py-lg-0 px-xxl-3">G</span>
-                      <span className="mx-3 mt-3 mt-lg-0 mx-lg-1 me-xxl-2 ms-xxl-4">
-                        <b className="d-block">همکار رسمی گوگل</b> در ایران
-                      </span>
-                    </button>
-                  </Link>
-                  <Link to="/" className="mt-5 text-decoration-none">
-                    <button className="shadow d-flex flex-column align-items-center px-1 py-4 ms-4 flex-lg-row py-lg-3 px-lg-3 ms-xxl-1">
-                      <span className="px-3 p-lg-2 py-lg-0 px-xxl-3">
-                        <FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon>
-                      </span>
-                      <span className="mx-3 mt-3 mt-lg-0 mx-lg-1 me-xxl-2 ms-xxl-4">
-                        <b className="d-block">مشاوره تخصصی</b> به صورت رایگان
-                      </span>
-                    </button>
-                  </Link>
+                <div className="main-page__desc__right-side">
+                  <p className="text-center text-lg-end">
+                    استودیو دیجیتال مارکتینگ نت ابزار
+                  </p>
+                  <h1 className="mt-2 text-center text-lg-end">
+                    ارائـه خدمات هوشـمند برای رونـق کسـب و کـار شـما
+                  </h1>
+                  <ul className="p-0  mt-4 mt-lg-5 text-center text-lg-end">
+                    <li className="d-inline-block me-1 ms-4 position-relative">
+                      برنامه ریزی
+                    </li>
+                    <li className="d-inline-block mx-4 position-relative">
+                      طراحی
+                    </li>
+                    <li className="d-inline-block mx-4 position-relative">
+                      توسعه
+                    </li>
+                  </ul>
+                  <div className=" d-flex justify-content-around  px-xxl-0 justify-content-lg-between">
+                    <Link to="/" className="mt-5 text-decoration-none">
+                      <button className="shadow d-flex flex-column align-items-center justify-content-center px-1 py-4 me-4 flex-lg-row py-lg-3 me-lg-0 px-lg-3">
+                        <span className="px-3 p-lg-2 py-lg-0 px-xxl-3">G</span>
+                        <span className="mx-3 mt-3 mt-lg-0 mx-lg-1 me-xxl-2 ms-xxl-4">
+                          <b className="d-block">همکار رسمی گوگل</b> در ایران
+                        </span>
+                      </button>
+                    </Link>
+                    <Link to="/" className="mt-5 text-decoration-none">
+                      <button className="shadow d-flex flex-column align-items-center px-1 py-4 ms-4 flex-lg-row py-lg-3 px-lg-3 ms-xxl-1">
+                        <span className="px-3 p-lg-2 py-lg-0 px-xxl-3">
+                          <FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon>
+                        </span>
+                        <span className="mx-3 mt-3 mt-lg-0 mx-lg-1 me-xxl-2 ms-xxl-4">
+                          <b className="d-block">مشاوره تخصصی</b> به صورت رایگان
+                        </span>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </Col>
               <Col
@@ -75,9 +79,9 @@ class MainPage extends Component {
                 data-aos="fade-right"
                 data-aos-easing="linear"
                 data-aos-duration="900"
-                className="main-page__desc__left-side pt-3 d-flex flex-row-reverse"
+                className=" pt-3 d-flex flex-row-reverse"
               >
-                <div>
+                <div className="main-page__desc__left-side">
                   <img
                     className="img-fluid"
                     src={softWareCompany}
@@ -205,22 +209,39 @@ class MainPage extends Component {
           </Col>
           <Col xs={12} className="main-page__introduction mt-5 bg-white">
             <Row>
-              <Col xs={6} className="main-page__introduction__right-side">
-                <h1 className="position-relative">چرا استدیو نت ابزار؟</h1>
-                <p>
-                  در استدیو نت ابزار ما تیمی از طراحان، برنامه نویسان و توسعه
-                  دهندگان با تجربه جمع آوری کرده ایم که با کیفیت ترین محصولات و
-                  خدمات را ارائه داده و بهترین تجربه ی کاری را برای شما ایجاد می
-                  کنند. اعضای تیم ما با تلاش و تحقیقات بی وقفه در زمینه طراحی وب
-                  و تولید نرم افزار توانسته اند محصول خود را با استفاده از
-                  پیشرفته ترین تکنیک ها تولید کرده و رضایت خاطر مشتریان خود را
-                  از ابتدا تا انتهای کار بدست بیاورند.
-                </p>
-                <p className="mt-5">
-                  "هدف اصلی ما در استدیو نت ابزار توسعه و رونق کسب و کار شماست."
-                </p>
+              <Col xs={6}>
+                <div className="main-page__introduction__right-side">
+                  <h1 className="position-relative">چرا استدیو نت ابزار؟</h1>
+                  <p>
+                    در استدیو نت ابزار ما تیمی از طراحان، برنامه نویسان و توسعه
+                    دهندگان با تجربه جمع آوری کرده ایم که با کیفیت ترین محصولات
+                    و خدمات را ارائه داده و بهترین تجربه ی کاری را برای شما
+                    ایجاد می کنند. اعضای تیم ما با تلاش و تحقیقات بی وقفه در
+                    زمینه طراحی وب و تولید نرم افزار توانسته اند محصول خود را با
+                    استفاده از پیشرفته ترین تکنیک ها تولید کرده و رضایت خاطر
+                    مشتریان خود را از ابتدا تا انتهای کار بدست بیاورند.
+                  </p>
+                  <p className="mt-5">
+                    "هدف اصلی ما در استدیو نت ابزار توسعه و رونق کسب و کار
+                    شماست."
+                  </p>
+                  <div className="mt-5">
+                    <button
+                      ref={this.button}
+                      onMouseEnter={this.hoverButton}
+                      onMouseLeave={this.onHoverButton}
+                      className="px-5 py-3"
+                    >
+                      بیشتر بدانیم
+                    </button>
+                  </div>
+                </div>
               </Col>
-              <Col xs={6} className="main-page__introduction__left-side"></Col>
+              <Col xs={6}>
+                <div className="main-page__introduction__left-side">
+                  <img src={exPic} alt="experience-picture" />
+                </div>
+              </Col>
             </Row>
             <br /> <br /> <br /> <br /> <br /> <br />
             <br /> <br /> <br /> <br /> <br /> <br />
@@ -246,6 +267,16 @@ class MainPage extends Component {
       top: 0,
       behavior: "smooth",
     });
+  };
+  hoverButton = () => {
+    this.button.current.style.transition = "border-radius 0.3s ease";
+    this.button.current.style.borderRadius = "10px";
+    this.button.current.style.backgroundColor='#267ffd';
+  };
+  onHoverButton = () => {
+    this.button.current.style.transition = "border-radius 0.3s ease";
+    this.button.current.style.borderRadius = "30px";
+    this.button.current.style.backgroundColor = "#000";
   };
 }
 

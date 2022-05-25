@@ -69,6 +69,7 @@
         width: 484px;
         overflow-x: scroll;
         height: 330px;
+        overflow-y: hidden;
 
     }
 
@@ -141,21 +142,17 @@
 
         .main-page__desc__left-side {
             z-index: 0;
-            div {
-                width: 450px;
+            width: 450px;
                 height: 500px;
-
+            
                 img {
                     border-radius: 0 0 50px 0;
                     height: 100%;
                 }
-            }
         }
     }
 
     .main-page__items {
-        margin-bottom: 40px;
-
         .main-page__items__wrapper {
             .main-page__items__wrapper__card {
                 width: 280px;
@@ -229,6 +226,19 @@
           p:nth-child(2){
               margin-top: 80px;
               color:#767676 ;
+          }
+          div{
+              button{
+                  border-radius: 30px;
+                  color: #fff;
+                  background-color: #000;
+                  border: none;
+              }
+              .hover-button{
+                  transition:border-radius 0.3s ease ;
+                  border-radius: 10px;
+                  background-color: #267ffd;
+              }
           }
       }
     }
