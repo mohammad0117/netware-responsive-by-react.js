@@ -6,12 +6,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 import softWareCompany from "../assets/image/software_development.jpg";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import softWareDeveloper from '../assets/image/software_developer.jpeg'
+import softWareDeveloper from "../assets/image/software_developer.jpeg";
 import { faTimeline } from "@fortawesome/free-solid-svg-icons";
 import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlassPlus } from "@fortawesome/free-solid-svg-icons";
-import woman from '../assets/image/woman_fontware_eng.webp'
+import woman from "../assets/image/woman_fontware_eng.webp";
+import AOS from "aos";
+import "aos/dist/aos.css";
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
@@ -21,7 +23,14 @@ class MainPage extends Component {
         <Container fluid className="main-page mt-4 p-0" dir="rtl">
           <Col xs={12} className="main-page__desc position-relative pt-5">
             <Row className="flex-column-reverse flex-lg-row">
-              <Col xs={12} lg={6} className="main-page__desc__right-side pt-5">
+              <Col
+                xs={12}
+                lg={6}
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="900"
+                className="main-page__desc__right-side pt-5"
+              >
                 <p className="text-center text-lg-end">
                   استودیو دیجیتال مارکتینگ نت ابزار
                 </p>
@@ -63,6 +72,9 @@ class MainPage extends Component {
               <Col
                 xs={12}
                 lg={6}
+                data-aos="fade-right"
+                data-aos-easing="linear"
+                data-aos-duration="900"
                 className="main-page__desc__left-side pt-3 d-flex flex-row-reverse"
               >
                 <div>
@@ -94,61 +106,94 @@ class MainPage extends Component {
               </Col>
               <Col lg={4} className="d-flex justify-content-center">
                 <div className="main-page__items__wrapper__card second d-flex flex-column justify-content-center mx-3 mx-lg-0  pt-lg-5">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faTimeline}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">بازاریابی آنلاین</button>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="900"
+                  >
+                    <div className="d-flex justify-content-center">
+                      <FontAwesomeIcon
+                        className="fa-time-line mt-5"
+                        icon={faTimeline}
+                      ></FontAwesomeIcon>
+                    </div>
+                    <div className="text-center my-4">
+                      <button className="">بازاریابی آنلاین</button>
+                    </div>
+                    <p className="text-center px-3">
+                      کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات
+                      در گوگل
+                    </p>
                   </div>
-                  <p className="text-center px-3">
-                    کمپین های بازاریابی بازاریابی در شبکه های اجتماعی تبلیغات در
-                    گوگل
-                  </p>
                 </div>
               </Col>
               <Col lg={4} className="d-flex flex-row-reverse">
                 <div className="main-page__items__wrapper__card third d-flex flex-column justify-content-center mx-3 mx-lg-0 pt-lg-5">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faPalette}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">طراحی گرافیکی</button>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="900"
+                  >
+                    <div className="d-flex justify-content-center">
+                      <FontAwesomeIcon
+                        className="fa-time-line mt-5"
+                        icon={faPalette}
+                      ></FontAwesomeIcon>
+                    </div>
+                    <div className="text-center my-4">
+                      <button className="">طراحی گرافیکی</button>
+                    </div>
+                    <p className="text-center px-3">
+                      طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی
+                      وب
+                    </p>
                   </div>
-                  <p className="text-center px-3">
-                    طراحی لوگو طراحی گرافیکی برند طراحی تراکت و طراحی گرافیکی وب
-                  </p>
                 </div>
               </Col>
               <Col lg={4}>
                 <div className="main-page__items__wrapper__card fourth d-flex flex-column justify-content-center mx-3 mx-lg-0 pt-4 pt-lg-5 mt-lg-4 mt-xl-5">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faFileAlt}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">نرم افزار سفارشی</button>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="900"
+                  >
+                    <div className="d-flex justify-content-center">
+                      <FontAwesomeIcon
+                        className="fa-time-line mt-5"
+                        icon={faFileAlt}
+                      ></FontAwesomeIcon>
+                    </div>
+                    <div className="text-center my-4">
+                      <button className="">نرم افزار سفارشی</button>
+                    </div>
+                    <p className="text-center px-4">
+                      طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
+                      نگهداری
+                    </p>
                   </div>
-                  <p className="text-center px-4">
-                    طراحی و تجزیه و تحلیل برنامه نویسی و پیاده سازی آزمایش و
-                    نگهداری
-                  </p>
                 </div>
               </Col>
               <Col lg={4} className="d-flex justify-content-center">
                 <div className="main-page__items__wrapper__card fifth d-flex flex-column justify-content-center mx-3 mx-lg-0 mt-lg-4 pt-lg-4 mt-xl-5">
-                  <FontAwesomeIcon
-                    className="fa-time-line mt-5"
-                    icon={faMagnifyingGlassPlus}
-                  ></FontAwesomeIcon>
-                  <div className="text-center my-4">
-                    <button className="">خدمات سیو</button>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-easing="linear"
+                    data-aos-duration="900"
+                  >
+                    <div className="d-flex justify-content-center">
+                      <FontAwesomeIcon
+                        className="fa-time-line mt-5"
+                        icon={faMagnifyingGlassPlus}
+                      ></FontAwesomeIcon>
+                    </div>
+                    <div className="text-center my-4">
+                      <button className="">خدمات سیو</button>
+                    </div>
+                    <p className="text-center px-3">
+                      افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات
+                      رقابتی
+                    </p>
                   </div>
-                  <p className="text-center px-3">
-                    افزایش رتبه سایت نمایش در صفحات اول گوگل و برتری در کلمات
-                    رقابتی
-                  </p>
                 </div>
               </Col>
               <Col lg={4} className="d-flex flex-row-reverse">
@@ -157,6 +202,29 @@ class MainPage extends Component {
                 </div>
               </Col>
             </div>
+          </Col>
+          <Col xs={12} className="main-page__introduction mt-5 bg-white">
+            <Row>
+              <Col xs={6} className="main-page__introduction__right-side">
+                <h1 className="position-relative">چرا استدیو نت ابزار؟</h1>
+                <p>
+                  در استدیو نت ابزار ما تیمی از طراحان، برنامه نویسان و توسعه
+                  دهندگان با تجربه جمع آوری کرده ایم که با کیفیت ترین محصولات و
+                  خدمات را ارائه داده و بهترین تجربه ی کاری را برای شما ایجاد می
+                  کنند. اعضای تیم ما با تلاش و تحقیقات بی وقفه در زمینه طراحی وب
+                  و تولید نرم افزار توانسته اند محصول خود را با استفاده از
+                  پیشرفته ترین تکنیک ها تولید کرده و رضایت خاطر مشتریان خود را
+                  از ابتدا تا انتهای کار بدست بیاورند.
+                </p>
+                <p className="mt-5">
+                  "هدف اصلی ما در استدیو نت ابزار توسعه و رونق کسب و کار شماست."
+                </p>
+              </Col>
+              <Col xs={6} className="main-page__introduction__left-side"></Col>
+            </Row>
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br />
           </Col>
         </Container>
       </>
@@ -170,6 +238,8 @@ class MainPage extends Component {
         this.scrolltopbutton.current.style.display = "none";
       }
     });
+    AOS.init();
+    AOS.refresh();
   }
   scrollTop = () => {
     window.scrollTo({

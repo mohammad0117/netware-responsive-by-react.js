@@ -154,7 +154,7 @@
     }
 
     .main-page__items {
-        margin-bottom: 200px;
+        margin-bottom: 40px;
 
         .main-page__items__wrapper {
             .main-page__items__wrapper__card {
@@ -211,7 +211,27 @@
             }
         }
     }
-
+    .main-page__introduction{
+        padding: 0 215px;
+      .main-page__introduction__right-side{
+          padding-top: 170px;
+          h1{
+              &::after{
+                  position: absolute;
+                  content: '';
+                  right: 0;
+                  top: 100px;
+                  width: 60px;
+                  height: 3px;
+                  background-color: #E7E7E7;
+              }
+          }
+          p:nth-child(2){
+              margin-top: 80px;
+              color:#767676 ;
+          }
+      }
+    }
     .main-page__button {
         position: fixed;
         border: none;
