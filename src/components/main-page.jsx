@@ -15,6 +15,7 @@ import woman from "../assets/image/woman_fontware_eng.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import exPic from '../assets/image/experience.jpg'
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
@@ -207,12 +208,14 @@ class MainPage extends Component {
               </Col>
             </div>
           </Col>
-          <Col xs={12} className="main-page__introduction mt-5 bg-white">
-            <Row>
-              <Col xs={6}>
+          <Col xs={12} className="main-page__introduction bg-white">
+            <Row className="flex-column-reverse flex-lg-row">
+              <Col xs={12} lg={6} className='pe-4'>
                 <div className="main-page__introduction__right-side">
-                  <h1 className="position-relative">چرا استدیو نت ابزار؟</h1>
-                  <p>
+                  <h1 className="position-relative text-center text-lg-end">
+                    چرا استدیو نت ابزار؟
+                  </h1>
+                  <p className="text-center text-lg-end">
                     در استدیو نت ابزار ما تیمی از طراحان، برنامه نویسان و توسعه
                     دهندگان با تجربه جمع آوری کرده ایم که با کیفیت ترین محصولات
                     و خدمات را ارائه داده و بهترین تجربه ی کاری را برای شما
@@ -221,11 +224,11 @@ class MainPage extends Component {
                     استفاده از پیشرفته ترین تکنیک ها تولید کرده و رضایت خاطر
                     مشتریان خود را از ابتدا تا انتهای کار بدست بیاورند.
                   </p>
-                  <p className="mt-5">
+                  <p className="mt-5 text-center text-lg-end">
                     "هدف اصلی ما در استدیو نت ابزار توسعه و رونق کسب و کار
                     شماست."
                   </p>
-                  <div className="mt-5">
+                  <div className="mt-5 text-center text-lg-end">
                     <button
                       ref={this.button}
                       onMouseEnter={this.hoverButton}
@@ -237,9 +240,25 @@ class MainPage extends Component {
                   </div>
                 </div>
               </Col>
-              <Col xs={6}>
-                <div className="main-page__introduction__left-side">
+              <Col
+                xs={12}
+                lg={6}
+                className="d-flex justify-content-center justify-content-lg-end"
+              >
+                <div className="main-page__introduction__left-side position-relative mt-3">
                   <img src={exPic} alt="experience-picture" />
+                  <div className="position-absolute py-5 px-4 d-flex justify-content-center align-items-center">
+                    <FontAwesomeIcon
+                      icon={faTrophy}
+                      className="fa-trophy mx-3 mb-2"
+                    ></FontAwesomeIcon>
+                    <p>
+                      <span className="d-block">بیش از 7 سال تجربه مستمر</span>
+                      <span className="d-block mt-3">
+                        ارایه خدمات دیجیتال از سال 2013
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </Col>
             </Row>
