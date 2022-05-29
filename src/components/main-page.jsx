@@ -16,6 +16,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import exPic from '../assets/image/experience.jpg'
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
+import meeting from '../assets/image/meeting.jpg'
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
@@ -210,7 +211,14 @@ class MainPage extends Component {
           </Col>
           <Col xs={12} className="main-page__introduction bg-white">
             <Row className="flex-column-reverse flex-lg-row">
-              <Col xs={12} lg={6} className='pe-4'>
+              <Col
+                xs={12}
+                lg={6}
+                data-aos="fade-right"
+                data-aos-easing="linear"
+                data-aos-duration="900"
+                className="pe-lg-4"
+              >
                 <div className="main-page__introduction__right-side">
                   <h1 className="position-relative text-center text-lg-end">
                     چرا استدیو نت ابزار؟
@@ -241,6 +249,9 @@ class MainPage extends Component {
                 </div>
               </Col>
               <Col
+                data-aos="fade-left"
+                data-aos-easing="linear"
+                data-aos-duration="900"
                 xs={12}
                 lg={6}
                 className="d-flex justify-content-center justify-content-lg-end"
@@ -262,9 +273,11 @@ class MainPage extends Component {
                 </div>
               </Col>
             </Row>
-            <br /> <br /> <br /> <br /> <br /> <br />
-            <br /> <br /> <br /> <br /> <br /> <br />
-            <br /> <br /> <br /> <br /> <br /> <br />
+          </Col>
+          <Col xs={12} className="main-page__introducing-team">
+            <div className="main-page__introducing-team__wrapper position-relative">
+              <img className="w-100" src={meeting} alt="meeting" />
+            </div>
           </Col>
         </Container>
       </>
