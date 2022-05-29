@@ -412,12 +412,34 @@
         margin: 190px 0;
 
         .main-page__introducing-team__wrapper {
+            height: 400px;
             img {
                 height: 400px;
-
-
+                width: 100%;
+                right: 0;
+                top: 0;
             }
 
+            p {
+                margin-top: 80px;
+                font-size: 35px;
+                color: #fff;
+                right: 22%;
+                bottom: 35%;
+                z-index: 2;
+                width: 860px;
+                background-color: rgba(0, 0, 0, .5);
+            }
+            button{
+                right: 45%;
+                bottom: 15%;
+                z-index: 3;
+                border: 2px solid #fff;
+                border-radius: 30px;
+                color: #fff;
+                background-color: transparent;
+                vertical-align: -1px;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -426,9 +448,10 @@
                 bottom: 0;
                 left: 0;
                 background: rgba(0, 0, 0, .75);
-                z-index: 1;
+                z-index:0;
             }
         }
+
 
     }
 

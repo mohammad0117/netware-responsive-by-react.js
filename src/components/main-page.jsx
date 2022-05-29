@@ -14,13 +14,14 @@ import { faMagnifyingGlassPlus } from "@fortawesome/free-solid-svg-icons";
 import woman from "../assets/image/woman_fontware_eng.webp";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import exPic from '../assets/image/experience.jpg'
+import exPic from "../assets/image/experience.jpg";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
-import meeting from '../assets/image/meeting.jpg'
+import meeting from "../assets/image/meeting1.jpg";
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
   button = createRef();
+  secondbutton = createRef();
   render() {
     return (
       <>
@@ -275,8 +276,20 @@ class MainPage extends Component {
             </Row>
           </Col>
           <Col xs={12} className="main-page__introducing-team">
-            <div className="main-page__introducing-team__wrapper position-relative">
-              <img className="w-100" src={meeting} alt="meeting" />
+            <div className="main-page__introducing-team__wrapper position-relative d-flex flex-column align-items-center">
+              <img className="position-absolute" src={meeting} alt="meeting" />
+              <p className=" py-4 px-5 text-center">
+                قدم های بزرگ در یک کسب و کار هیچ وقت نه توسط یک نفر بلکه توسط یک
+                تیم خلاق برداشته میشود.
+              </p>
+              <button
+                ref={this.secondbutton}
+                onMouseEnter={this.hover}
+                onMouseLeave={this.onHover}
+                className="mt-3 py-2 px-4"
+              >
+                آشنایی با تیم ما
+              </button>
             </div>
           </Col>
         </Container>
@@ -303,12 +316,24 @@ class MainPage extends Component {
   hoverButton = () => {
     this.button.current.style.transition = "border-radius 0.3s ease";
     this.button.current.style.borderRadius = "10px";
-    this.button.current.style.backgroundColor='#267ffd';
+    this.button.current.style.backgroundColor = "#267ffd";
   };
   onHoverButton = () => {
     this.button.current.style.transition = "border-radius 0.3s ease";
     this.button.current.style.borderRadius = "30px";
     this.button.current.style.backgroundColor = "#000";
+  };
+  hover = () => {
+    this.secondbutton.current.style.transition = "border-radius 0.3s ease";
+    this.secondbutton.current.style.borderRadius = "10px";
+    this.secondbutton.current.style.backgroundColor = "#fff";
+    this.secondbutton.current.style.color = "#000";
+  };
+  onHover = () => {
+    this.secondbutton.current.style.transition = "border-radius 0.3s ease";
+    this.secondbutton.current.style.borderRadius = "30px";
+    this.secondbutton.current.style.backgroundColor = "transparent";
+    this.secondbutton.current.style.color = "#fff";
   };
 }
 
