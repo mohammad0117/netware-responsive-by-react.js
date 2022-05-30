@@ -141,6 +141,22 @@
         }
     }
 
+    .main-page__introducing-team {
+        margin: 190px 0;
+
+        .main-page__introducing-team__wrapper {
+
+            p {
+                margin-top: 80px;
+                font-size: 20px !important;
+                width: auto !important;
+                font-weight: 600;
+                line-height: 35px;
+            }
+        }
+
+
+    }
 }
 
 @media screen and (min-width: 1023px) {
@@ -413,6 +429,7 @@
 
         .main-page__introducing-team__wrapper {
             height: 400px;
+
             img {
                 height: 400px;
                 width: 100%;
@@ -430,7 +447,8 @@
                 width: 860px;
                 background-color: rgba(0, 0, 0, .5);
             }
-            button{
+
+            button {
                 right: 45%;
                 bottom: 15%;
                 z-index: 3;
@@ -440,6 +458,7 @@
                 background-color: transparent;
                 vertical-align: -1px;
             }
+
             &::after {
                 content: '';
                 position: absolute;
@@ -448,11 +467,44 @@
                 bottom: 0;
                 left: 0;
                 background: rgba(0, 0, 0, .75);
-                z-index:0;
+                z-index: 0;
             }
         }
 
 
+    }
+
+    .main-page__latest-portfolio {
+        .main-page__latest-portfolio__wrapper {
+            h2 {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 72px;
+                    right: 41%;
+                    background-color: #E7E7E7;
+                    width: 60px;
+                    height: 3px;
+                    border-radius: 8px;
+                }
+            }
+
+            p {
+                width: 690px;
+                color: #868686;
+            }
+        }
+        .wrapper{
+            padding: 0 170px;
+            .main-page__latest-portfolio__card {
+                    img {
+                        width: 350px;
+                        height: 280px;
+                        border-radius: 8px;
+                    }
+                }
+        }
+        
     }
 
     .main-page__button {

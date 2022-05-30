@@ -102,6 +102,16 @@
     width: 445px !important;
     border-radius: 0 0 75px 0;
   }
+  .main-page__introducing-team {
+    margin: 190px 0;
+  }
+  .main-page__introducing-team .main-page__introducing-team__wrapper p {
+    margin-top: 80px;
+    font-size: 20px !important;
+    width: auto !important;
+    font-weight: 600;
+    line-height: 35px;
+  }
 }
 
 @media screen and (min-width: 1023px) {
@@ -380,6 +390,32 @@
   left: 0;
   background: rgba(0, 0, 0, 0.75);
   z-index: 0;
+}
+
+.main-page .main-page__latest-portfolio .main-page__latest-portfolio__wrapper h2::after {
+  content: '';
+  position: absolute;
+  top: 72px;
+  right: 41%;
+  background-color: #E7E7E7;
+  width: 60px;
+  height: 3px;
+  border-radius: 8px;
+}
+
+.main-page .main-page__latest-portfolio .main-page__latest-portfolio__wrapper p {
+  width: 690px;
+  color: #868686;
+}
+
+.main-page .main-page__latest-portfolio .wrapper {
+  padding: 0 170px;
+}
+
+.main-page .main-page__latest-portfolio .wrapper .main-page__latest-portfolio__card img {
+  width: 350px;
+  height: 280px;
+  border-radius: 8px;
 }
 
 .main-page .main-page__button {

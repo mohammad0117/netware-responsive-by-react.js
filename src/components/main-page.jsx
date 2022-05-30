@@ -17,6 +17,12 @@ import "aos/dist/aos.css";
 import exPic from "../assets/image/experience.jpg";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import meeting from "../assets/image/meeting1.jpg";
+import chair from '../assets/image/chair.jpg'
+import veg from '../assets/image/vegetables.jpg'
+import glass from '../assets/image/glasses.jpg'
+import sofa  from '../assets/image/sofa.jpg'
+import dentist from '../assets/image/dentist.jpeg'
+import officeChair from '../assets/image/office_chair.jpg'
 class MainPage extends Component {
   state = {};
   scrolltopbutton = createRef();
@@ -276,9 +282,9 @@ class MainPage extends Component {
             </Row>
           </Col>
           <Col xs={12} className="main-page__introducing-team">
-            <div className="main-page__introducing-team__wrapper position-relative d-flex flex-column align-items-center">
+            <div className="main-page__introducing-team__wrapper position-relative d-flex flex-column align-items-center px-3">
               <img className="position-absolute" src={meeting} alt="meeting" />
-              <p className=" py-4 px-5 text-center">
+              <p className="px-5 py-3 text-center">
                 قدم های بزرگ در یک کسب و کار هیچ وقت نه توسط یک نفر بلکه توسط یک
                 تیم خلاق برداشته میشود.
               </p>
@@ -291,6 +297,51 @@ class MainPage extends Component {
                 آشنایی با تیم ما
               </button>
             </div>
+          </Col>
+          <Col xs={12} className="main-page__latest-portfolio px-3">
+            <div className="main-page__latest-portfolio__wrapper d-flex flex-column align-items-center">
+              <h2 className="position-relative">جدیدترین نمونه کارها</h2>
+              <p className="text-center mt-5 px-2">
+                مشاهده نمونه کارهای اجرا شده توسط شرکت ها بهترین راه برای محک
+                زدن توانایی های آنها در حوزه کاری خود است. در اینجا چند نمونه از
+                آخرین پروژه های ما را مشاهده میکنید.
+              </p>
+            </div>
+            <Row className="mt-5 wrapper">
+              <Col xs={4}>
+                <div className="main-page__latest-portfolio__card">
+                  <img className="img-fluid" src={chair} alt="chair" />
+                </div>
+              </Col>
+              <Col xs={4} className="d-flex justify-content-center">
+                <div className="main-page__latest-portfolio__card">
+                  <img className="img-fluid" src={veg} alt="veg" />
+                </div>
+              </Col>
+              <Col xs={4} className="d-flex justify-content-end">
+                <div className="main-page__latest-portfolio__card">
+                  <img src={glass} alt="glasses" />
+                </div>
+              </Col>
+              <Col xs={4} className='mt-5'>
+                <div className="main-page__latest-portfolio__card">
+                  <img className="img-fluid" src={sofa} alt="sofa" />
+                </div>
+              </Col>
+              <Col xs={4} className="d-flex justify-content-center mt-5">
+                <div className="main-page__latest-portfolio__card">
+                  <img className="img-fluid" src={dentist} alt="dentist" />
+                </div>
+              </Col>
+              <Col xs={4} className="d-flex justify-content-end mt-5">
+                <div className="main-page__latest-portfolio__card">
+                  <img src={officeChair} alt="office-chair" />
+                </div>
+              </Col>
+            </Row>
+            <br /> <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br /> <br /> <br /> <br /> <br />
           </Col>
         </Container>
       </>
