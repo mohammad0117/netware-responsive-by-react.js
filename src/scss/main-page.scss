@@ -1,4 +1,172 @@
 //custom media
+@media screen and (max-width: 505px) {
+    .main-page__items__wrapper {
+        display: flex;
+        width: 484px;
+        overflow-x: scroll;
+        height: 330px;
+        overflow-y: hidden;
+
+    }
+
+    .main-page__introduction {
+        margin-top: 3rem;
+        padding: 0 1rem;
+
+        .main-page__introduction__right-side {
+            padding-top: 110px;
+
+            h1 {
+                &::after {
+                    right: 200px !important;
+                    top: 74px !important;
+                }
+            }
+
+            p:nth-child(2) {
+                line-height: 35px;
+            }
+
+        }
+
+        .main-page__introduction__left-side {
+
+            div {
+                bottom: -69px !important;
+                left: 0px !important;
+                width: 445px !important;
+                border-radius: 0 0 75px 0;
+            }
+        }
+    }
+
+    .main-page__introducing-team {
+        margin: 190px 0;
+
+        .main-page__introducing-team__wrapper {
+
+            p {
+                margin-top: 80px;
+                font-size: 20px !important;
+                width: auto !important;
+                font-weight: 600;
+                line-height: 35px;
+            }
+        }
+
+
+    }
+
+    .main-page__latest-portfolio {
+        .main-page__latest-portfolio__wrapper {
+            h2 {
+                &::after {
+                    top: 62px !important;
+                }
+            }
+
+            p {
+                width: auto !important;
+                color: #868686;
+            }
+        }
+
+        .wrapper {
+
+            padding: 0 !important;
+
+            .main-page__latest-portfolio__card {
+                img {
+                    width: 350px;
+                    height: 280px;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1023px) {
+
+    .grid {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+
+    .main-page__introduction {
+        padding: 0 56px;
+
+        .main-page__introduction__right-side {
+            padding-top: 110px;
+
+            h1 {
+                &::after {
+                    position: absolute;
+                    content: '';
+                    right: 0;
+                    top: 74px;
+                    width: 60px;
+                    height: 3px;
+                    background-color: #E7E7E7;
+                }
+            }
+        }
+
+        .main-page__introduction__left-side {
+            padding-top: 166px;
+
+            img {
+                width: 365px;
+                border-radius: 85px 0 85px 0;
+            }
+
+            div {
+                bottom: -69px;
+                left: 80px;
+                width: 380px;
+                border-radius: 0 0 75px 0;
+
+                .fa-trophy {
+                    font-size: 55px;
+                }
+
+                p {
+                    span:nth-child(1) {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    span:nth-child(2) {
+                        font-size: 16px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-page__latest-portfolio {
+        .wrapper {
+
+            .main-page__latest-portfolio__card {
+                img {
+                    width: 300px !important;
+                    height: 300px !important;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .main-page__desc {
         padding: 0 1rem;
@@ -70,6 +238,20 @@
             }
         }
     }
+
+    .main-page__latest-portfolio {
+        .wrapper {
+
+            .main-page__latest-portfolio__card {
+                img {
+                    width: 350px !important;
+                    height: 280px !important;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+    }
 }
 
 @media screen and (min-width: 1535px) {
@@ -100,131 +282,6 @@
     }
 }
 
-@media screen and (max-width: 505px) {
-    .main-page__items__wrapper {
-        display: flex;
-        width: 484px;
-        overflow-x: scroll;
-        height: 330px;
-        overflow-y: hidden;
-
-    }
-
-    .main-page__introduction {
-        margin-top: 3rem;
-        padding: 0 1rem;
-
-        .main-page__introduction__right-side {
-            padding-top: 110px;
-
-            h1 {
-                &::after {
-                    right: 200px !important;
-                    top: 74px !important;
-                }
-            }
-
-            p:nth-child(2) {
-                line-height: 35px;
-            }
-
-        }
-
-        .main-page__introduction__left-side {
-
-            div {
-                bottom: -69px !important;
-                left: 0px !important;
-                width: 445px !important;
-                border-radius: 0 0 75px 0;
-            }
-        }
-    }
-
-    .main-page__introducing-team {
-        margin: 190px 0;
-
-        .main-page__introducing-team__wrapper {
-
-            p {
-                margin-top: 80px;
-                font-size: 20px !important;
-                width: auto !important;
-                font-weight: 600;
-                line-height: 35px;
-            }
-        }
-
-
-    }
-}
-
-@media screen and (min-width: 1023px) {
-
-    .grid {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: calc(-1 * var(--bs-gutter-y));
-        margin-right: calc(-.5 * var(--bs-gutter-x));
-        margin-left: calc(-.5 * var(--bs-gutter-x));
-    }
-
-    .main-page__introduction {
-        padding: 0 56px;
-
-        .main-page__introduction__right-side {
-            padding-top: 110px;
-
-            h1 {
-                &::after {
-                    position: absolute;
-                    content: '';
-                    right: 0;
-                    top: 74px;
-                    width: 60px;
-                    height: 3px;
-                    background-color: #E7E7E7;
-                }
-            }
-        }
-
-        .main-page__introduction__left-side {
-            padding-top: 166px;
-
-            img {
-                width: 365px;
-                border-radius: 85px 0 85px 0;
-            }
-
-            div {
-                bottom: -69px;
-                left: 80px;
-                width: 380px;
-                border-radius: 0 0 75px 0;
-
-                .fa-trophy {
-                    font-size: 55px;
-                }
-
-                p {
-                    span:nth-child(1) {
-                        font-size: 20px;
-                        font-weight: 700;
-                    }
-
-                    span:nth-child(2) {
-                        font-size: 16px;
-                        font-weight: 500;
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
-    }
-
-}
 
 .main-page {
 
@@ -480,7 +537,7 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 72px;
+                    top: 62px;
                     right: 41%;
                     background-color: #E7E7E7;
                     width: 60px;
@@ -490,21 +547,21 @@
             }
 
             p {
-                width: 690px;
+                 width: 690px;
                 color: #868686;
             }
         }
-        .wrapper{
+
+        .wrapper {
+
             padding: 0 170px;
             .main-page__latest-portfolio__card {
-                    img {
-                        width: 350px;
-                        height: 280px;
-                        border-radius: 8px;
-                    }
+                img {
+                    border-radius: 8px;
                 }
+            }
         }
-        
+
     }
 
     .main-page__button {
